@@ -1,0 +1,12 @@
+:root {
+    --blue: #0097b2;
+    --yellow: rgba(255, 222, 89, 0.56);
+    --grayfont: #494949;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
