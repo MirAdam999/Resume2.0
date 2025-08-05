@@ -38,32 +38,46 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#nav-link {
+.nav-link {
     position: relative;
     display: inline-block;
     padding-bottom: 4px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
 }
 
-#nav-link:hover {
+.nav-link:hover {
     cursor: pointer;
 }
 
-#nav-link::after {
+.nav-link::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0%;
     height: 100%;
-    border-bottom: 2px solid var(--blue);
+    background-color: var(--yellow);
     transition: width 0.3s ease;
     z-index: -1;
 }
 
-#nav-link:hover::after {
+.nav-link:hover::after {
     width: 100%;
+}
+
+.nav-link:visited,
+.nav-link:active {
+    color: var(--blue);
+}
+
+.nav-link.active-link::after,
+.nav-link:active::after {
+    width: 100%;
+    background-color: var(--yellow);
 }
 
 /*sections*/

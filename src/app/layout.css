@@ -4,6 +4,10 @@
     --grayfont: #494949;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     justify-content: center;

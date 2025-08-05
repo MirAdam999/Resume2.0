@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 
-import Stack from "./homepage_comps/stack";
-import Carousel from "./homepage_comps/carusel";
-
 import './page.css'
 
 import { useState, useEffect } from "react";
@@ -43,15 +40,50 @@ const handwriting = Satisfy({
 
 export default function Home() {
   const [shrink, setShrink] = useState(false);
+  const [navbarLinkActive, setNavbarLinkActive] = useState('landing-parent');
 
   useEffect(() => {
-    const handleScroll = () => {
+    const sections = document.querySelectorAll('.section-parent');
+    const offset = 200;
+
+    const updateActiveSection = () => {
+      let currentId = navbarLinkActive;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= offset && rect.bottom > offset) {
+          currentId = section.id;
+        }
+      });
+      setNavbarLinkActive(currentId);
+    };
+
+    const navbarShrinkOnScroll = () => {
       setShrink(window.scrollY > 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', navbarShrinkOnScroll);
+    window.addEventListener('scroll', updateActiveSection);
+
+    return () => {
+      window.removeEventListener('scroll', navbarShrinkOnScroll);
+      window.removeEventListener('scroll', updateActiveSection);
+    };
   }, []);
+
+  const handleNavbarUse = (e, id) => {
+    e.preventDefault();
+    const div = document.getElementById(id);
+    if (div) {
+      setNavbarLinkActive(id);
+      div.scrollIntoView(
+        {
+          behavior: 'smooth',
+          block: 'center'
+        }
+      );
+    }
+  }
 
   const DownloadCV = () => {
     const link = document.createElement('a');
@@ -66,13 +98,20 @@ export default function Home() {
     <div className="main">
 
       <nav className={`navbar ${shrink ? 'shrink' : ''}`}>
-        <div id="nav-link" className={wide_font.className}>Projects</div>
-        <div id="nav-link" className={wide_font.className}>About</div>
-        <div id="nav-link" className={wide_font.className}>Skills</div>
-        <div id="nav-link" className={wide_font.className}>Contact</div>
+        <a className={`nav-link ${wide_font.className} ${navbarLinkActive === 'projetcs-parent' ? 'active-link' : ''}`}
+          onClick={(e) => handleNavbarUse(e, 'projetcs-parent')}>Projects</a>
+
+        <a className={`nav-link ${wide_font.className} ${navbarLinkActive === 'about-parent' ? 'active-link' : ''}`}
+          onClick={(e) => handleNavbarUse(e, 'about-parent')}>About</a>
+
+        <a className={`nav-link ${wide_font.className} ${navbarLinkActive === 'skills-parent' ? 'active-link' : ''}`}
+          onClick={(e) => handleNavbarUse(e, 'skills-parent')}>Skills</a>
+
+        <a className={`nav-link ${wide_font.className} ${navbarLinkActive === 'contact-parent' ? 'active-link' : ''}`}
+          onClick={(e) => handleNavbarUse(e, 'contact-parent')}>Contact</a>
       </nav>
 
-      <div className="section-parent">
+      <div className="section-parent" id='landing-parent'>
         <div className="section" id="landing">
 
           <div className={norm_font.className} id="hello">
@@ -100,7 +139,7 @@ export default function Home() {
         <div className="section" id="projects">
           <div id='header' className={wide_font.className}>Projects</div>
           <div id="projects-carusel">
-            <Carousel />
+
           </div>
         </div>
       </div>
