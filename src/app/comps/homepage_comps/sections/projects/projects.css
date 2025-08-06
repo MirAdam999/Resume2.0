@@ -1,0 +1,11 @@
+#projects {
+    width: 1200px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+#projects #header {
+    color: white;
+    font-size: 60px;
+}
