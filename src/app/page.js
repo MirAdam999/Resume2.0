@@ -18,15 +18,15 @@ export default function Home() {
 
   useEffect(() => {
     const sections = document.querySelectorAll('.section-parent');
-    const topOffset = 0;
-    const bottomOffset = 800;
+    const viewportHeight = window.innerHeight;
+    const offset = viewportHeight / 5;
 
     const updateActiveSection = () => {
       let currentId = navbarLinkActive;
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= topOffset && rect.bottom > bottomOffset) {
+        if (rect.top <= offset) {
           currentId = section.id;
         }
       });
