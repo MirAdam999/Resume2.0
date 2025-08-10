@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react";
 
 import './page.css'
-import { norm_font } from "./comps/fonts";
+import { norm_font } from "../comps/fonts";
 
-import Navbar from './comps/homepage_comps/navbar/navbar';
-import Skills from "./comps/homepage_comps/sections/skills/skills";
-import Contact from "./comps/homepage_comps/sections/contact/contact";
-import About from "./comps/homepage_comps/sections/about/about";
-import Projects from "./comps/homepage_comps/sections/projects/projects";
-import Landing from "./comps/homepage_comps/sections/landing/landing";
+import Navbar from '../comps/homepage_comps/navbar/navbar';
+import Skills from "../comps/homepage_comps/sections/skills/skills";
+import Contact from "../comps/homepage_comps/sections/contact/contact";
+import About from "../comps/homepage_comps/sections/about/about";
+import Projects from "../comps/homepage_comps/sections/projects/projects";
+import Landing from "../comps/homepage_comps/sections/landing/landing";
 
 export default function Home() {
   const [shrink, setShrink] = useState(false);
@@ -34,7 +34,7 @@ export default function Home() {
     };
 
     const navbarShrinkOnScroll = () => {
-      setShrink(window.scrollY > 300);
+      setShrink(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', navbarShrinkOnScroll);

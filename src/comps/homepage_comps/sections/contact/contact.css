@@ -75,9 +75,9 @@
 #thanks {
     color: var(--blue);
     font-size: 50px;
-    transform: rotate(-8deg);
+    transform: rotate(-5deg);
     margin-top: 120px;
     margin-bottom: 50px;
     align-self: center;
-    margin-right: 200px;
+
 }

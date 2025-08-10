@@ -1,7 +1,7 @@
 'use client';
 
 import './contact.css'
-import { wide_font, norm_font, handwriting } from '@/app/comps/fonts';
+import { wide_font, norm_font, handwriting } from '@/comps/fonts';
 
 import { VscGithubAlt } from "react-icons/vsc";
 import { IoDocumentTextOutline, IoMailOutline } from "react-icons/io5";

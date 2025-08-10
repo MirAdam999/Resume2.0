@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 
-import { wide_font, norm_font } from "@/app/comps/fonts";
+import { wide_font, norm_font } from "@/comps/fonts";
 import './about.css'
 
 export default function About() {

@@ -1,5 +1,5 @@
 
-import { wide_font } from "@/app/comps/fonts"
+import { wide_font } from "@/comps/fonts"
 import './projects.css'
 
 export default function Projects() {

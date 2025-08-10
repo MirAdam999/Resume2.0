@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 import './landing.css'
-import { norm_font, norm_font_fat } from "@/app/comps/fonts";
+import { norm_font, norm_font_fat } from "@/comps/fonts";
 
 export default function Landing() {
 

@@ -1,5 +1,5 @@
 
-import { wide_font, norm_font } from "@/app/comps/fonts";
+import { wide_font, norm_font } from "@/comps/fonts";
 import './skills.css'
 
 import { FaPython, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaDocker } from "react-icons/fa";

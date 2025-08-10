@@ -11,6 +11,5 @@ html {
 body {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
     margin: 0;
 }
