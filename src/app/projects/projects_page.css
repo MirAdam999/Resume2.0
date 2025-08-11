@@ -8,7 +8,8 @@
     margin-top: 0;
     width: 100%;
     background-color: var(--blue);
-
+    min-height: calc(100vh - 30px);
+    overflow: hidden;
 }
 
 #pp-top {
@@ -45,12 +46,14 @@
     align-items: center;
 }
 
-#pp-nav span {
-    background-color: white;
-    color: var(--blue);
-    font-size: 20px;
-    margin-left: 0;
-    margin-right: 0;
+.icon-wrapper {
+    color: white;
+    cursor: pointer;
+    transition: ease 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #home-icom-wrapper {
@@ -62,12 +65,16 @@
     font-size: 40px;
     color: white;
     padding: 0;
-    cursor: pointer;
-    transition: ease 0.2s;
 }
 
-.nav-icon:hover {
+.icon-wrapper:hover {
     transform: scale(1.1);
+}
+
+#nav-label {
+    background-color: var(--blue);
+    color: white;
+    font-size: 20px;
 }
 
 .project-wrapper {
@@ -76,7 +83,6 @@
     align-self: center;
     width: 1200px;
     cursor: default;
-
     position: relative;
 }
 

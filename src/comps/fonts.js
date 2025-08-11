@@ -5,6 +5,11 @@ export const wide_font = Montserrat({
     weight: ['400']
 })
 
+export const wide_font_fat = Montserrat({
+    subsets: ['latin'],
+    weight: ['600']
+})
+
 export const norm_font = Barlow({
     subsets: ['latin'],
     weight: ['400']

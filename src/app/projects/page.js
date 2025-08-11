@@ -9,8 +9,7 @@ import SmishingProj from "@/comps/projectpage_comps/proj-data/smishing-proj";
 import PegasusProj from "@/comps/projectpage_comps/proj-data/pegasus-proj";
 import { wide_font, norm_font, norm_font_fat } from "@/comps/fonts"
 import { AiFillHome } from "react-icons/ai";
-import { AiFillCaretLeft } from "react-icons/ai";
-import { AiFillCaretRight } from "react-icons/ai";
+import { SlArrowLeftCircle, SlArrowRightCircle } from "react-icons/sl";
 import './projects_page.css'
 
 export default function ProjectsPage() {
@@ -52,9 +51,21 @@ export default function ProjectsPage() {
                 </div>
 
                 <div id='pp-nav'>
-                    <div className="icon-wrapper"><AiFillCaretLeft onClick={moveRight} className="nav-icon" /></div>
-                    <Link href="/" passHref><div className="icon-wrapper" id='home-icom-wrapper'><AiFillHome className="nav-icon" /></div></Link>
-                    <div className="icon-wrapper"><AiFillCaretRight onClick={moveLeft} className="nav-icon" /></div>
+                    <div className="icon-wrapper">
+                        <SlArrowLeftCircle onClick={moveRight} className="nav-icon" />
+
+                    </div>
+
+                    <Link href="/" passHref>
+                        <div className="icon-wrapper" id='home-icom-wrapper'>
+                            <AiFillHome className="nav-icon" />
+                        </div>
+                    </Link>
+
+                    <div className="icon-wrapper">
+                        <SlArrowRightCircle onClick={moveLeft} className="nav-icon" />
+
+                    </div>
                 </div>
 
             </div>
@@ -63,6 +74,7 @@ export default function ProjectsPage() {
                 <Project title={EqupmentProj.title}
                     about={EqupmentProj.about}
                     images={EqupmentProj.images}
+                    skills={EqupmentProj.skills}
                     gitLink={EqupmentProj.gitLink}
                     liveLink={EqupmentProj.liveLink}
                     is_current={current === 0 ? 'current_proj' : ''}
@@ -71,6 +83,7 @@ export default function ProjectsPage() {
                 <Project title={EventhubProj.title}
                     about={EventhubProj.about}
                     images={EventhubProj.images}
+                    skills={EventhubProj.skills}
                     gitLink={EventhubProj.gitLink}
                     liveLink={EventhubProj.liveLink}
                     is_current={current === 1 ? 'current_proj' : ''}
@@ -79,6 +92,7 @@ export default function ProjectsPage() {
                 <Project title={SmishingProj.title}
                     about={SmishingProj.about}
                     images={SmishingProj.images}
+                    skills={SmishingProj.skills}
                     gitLink={SmishingProj.gitLink}
                     liveLink={SmishingProj.liveLink}
                     is_current={current === 2 ? 'current_proj' : ''}
@@ -87,6 +101,7 @@ export default function ProjectsPage() {
                 <Project title={PegasusProj.title}
                     about={PegasusProj.about}
                     images={PegasusProj.images}
+                    skills={PegasusProj.skills}
                     gitLink={PegasusProj.gitLink}
                     liveLink={PegasusProj.liveLink}
                     is_current={current === 3 ? 'current_proj' : ''}

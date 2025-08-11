@@ -7,6 +7,7 @@ const SmishingProj = {
         "/images/prj-screenshots/smishing2.jpg",
         "/images/prj-screenshots/smishing3.jpg"
     ],
+    skills: ['React', 'HTML', 'CSS'],
     gitLink: "",
     liveLink: ""
 };

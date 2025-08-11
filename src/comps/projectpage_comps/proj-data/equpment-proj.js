@@ -33,9 +33,8 @@ const EqupmentProj = {
 
         <h3>Live Demo</h3>
         <p>
-            The live demo of the system showcases a fictional multi-branch clinic inspired by the original project concept.
-            <span id='live-view-warning'>Please note that the demo is intended for desktop use only at this time.</span>
-            For your convenience, demo user data is available here and on the login page.
+            The live demo of the system showcases a fictional multi-branch clinic inspired by the original project concept.< br />
+            For your convenience, demo user data is available on the login page.
         </p>
     </div>,
     images: [
@@ -43,7 +42,8 @@ const EqupmentProj = {
         "/images/prj-screenshots/equpment2.png",
         "/images/prj-screenshots/equpment3.png"
     ],
-    gitLink: "",
+    skills: ['MySQL', 'Django', 'React', 'HTML', 'CSS'],
+    gitLink: "https://github.com/MirShukhman/Equpment",
     liveLink: ""
 };
 
