@@ -1,0 +1,54 @@
+.carousel-container {
+    height: calc(101vh - 100px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+
+}
+
+.carusel-inner {
+    align-self: flex-start;
+    margin-top: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    width: 1080px;
+    grid-template-columns: repeat(30, 140px);
+
+}
+
+.proj-on-carusel {
+    position: relative;
+    background-color: white;
+    height: calc(101vh - 250px);
+    width: 800px;
+}
+
+#p-l {
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#p-r {
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#current {
+    z-index: 2;
+    background-color: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    transform: scaleX(1.2) scaleY(1.1);
+}
+
+.carousel-btn {
+    color: white;
+    font-size: 60px;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.2);
+}
