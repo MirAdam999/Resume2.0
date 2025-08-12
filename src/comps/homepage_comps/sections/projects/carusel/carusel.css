@@ -1,52 +1,64 @@
 .carousel-container {
     height: calc(101vh - 100px);
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 1200px;
-
+    overflow: hidden;
 }
 
 .carusel-inner {
-    align-self: flex-start;
-    margin-top: 50px;
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 1080px;
-    grid-template-columns: repeat(30, 140px);
-
+    height: calc(101vh - 250px);
 }
 
 .proj-on-carusel {
-    position: relative;
-    background-color: white;
-    height: calc(101vh - 250px);
+    position: absolute;
+    transition: all 1s ease;
     width: 800px;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#p-l {
-    z-index: 1;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+/* Center project */
+.proj-on-carusel.center {
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    background: blueviolet;
 }
 
-#p-r {
-    z-index: 1;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-#current {
+/* Left neighbor */
+.proj-on-carusel.left {
+    transform: translateX(-420px) scale(0.9);
     z-index: 2;
-    background-color: blueviolet;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-    transform: scaleX(1.2) scaleY(1.1);
+}
+
+/* Right neighbor */
+.proj-on-carusel.right {
+    transform: translateX(420px) scale(0.9);
+    z-index: 2;
+}
+
+/* Hidden projects */
+.proj-on-carusel.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .carousel-btn {
-    color: white;
+    position: relative;
+    color: blue;
     font-size: 60px;
     transition: ease 0.3s;
     cursor: pointer;
+    z-index: 90;
 }
 
 .carousel-btn:hover {
