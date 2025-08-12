@@ -32,9 +32,9 @@ const EventhubProj = {
         </div>
     ,
     images: [
-        "/images/prj-screenshots/eventhub1.jpg",
-        "/images/prj-screenshots/eventhub2.jpg",
-        "/images/prj-screenshots/eventhub3.jpg"
+        ["/images/prj-screenshots/eventhub1.jpg", 'Homepage'],
+        ["/images/prj-screenshots/eventhub2.jpg", 'Passed & Attended Event Image Gallery'],
+        ["/images/prj-screenshots/eventhub3.jpg", 'My Events Page & Sidebar']
     ],
     skills: ['MSSQL', 'Flask', 'React', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirShukhman/Project-3-Event-Hub",

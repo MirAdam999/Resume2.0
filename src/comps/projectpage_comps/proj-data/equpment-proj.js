@@ -38,9 +38,9 @@ const EqupmentProj = {
         </p>
     </div>,
     images: [
-        "/images/prj-screenshots/equpment1.png",
-        "/images/prj-screenshots/equpment2.png",
-        "/images/prj-screenshots/equpment3.png"
+        ["/images/prj-screenshots/equpment1.png", 'Global Admin Interface: Manage Orders'],
+        ["/images/prj-screenshots/equpment2.png", 'Branch Admin Interface: Create Order'],
+        ["/images/prj-screenshots/equpment3.png", 'Global Admin Interface: Manage Equpment Items']
     ],
     skills: ['MySQL', 'Django', 'React', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirShukhman/Equpment",

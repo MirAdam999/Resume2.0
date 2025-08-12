@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import './popup.css'
+import { norm_font } from '@/comps/fonts';
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 import { AiFillCloseSquare } from "react-icons/ai";
 
@@ -10,8 +11,8 @@ const Popup = (props) => {
     const proj_images = props.proj_images;
     const setImage = props.setImage;
     const closePopup = props.closeImage;
-    const img_width = 1120
-    const img_height = img_width / 2.086
+    const img_width = 1120;
+    const img_height = img_width / 2.086;
 
     const goRight = () => {
         if (proj_images.indexOf(current_image) >= proj_images.length - 1) {
@@ -36,18 +37,21 @@ const Popup = (props) => {
 
             <div className="popup-inner">
                 <div className='popup-icon' id="arrow-left" onClick={goLeft}><TfiAngleLeft /></div>
-                <Image className='img-popup'
-                    src={current_image}
-                    alt={`image`}
-                    width={img_width}
-                    height={img_height}
-                />
+                <div className='popup-img-wrap'>
+                    <Image className='img-popup'
+                        src={current_image[0]}
+                        alt={`image-${current_image[1]}`}
+                        width={img_width}
+                        height={img_height}
+                    />
+                    <p className={`popup-img-descript ${norm_font.className}`}>{current_image[1]}</p>
+                </div>
                 <div className='popup-icon' id="arrow-right" onClick={goRight}><TfiAngleRight /></div>
 
                 <div className='popup-icon' id="close-popup" onClick={closePopup}><AiFillCloseSquare /></div>
             </div>
 
-        </div>
+        </div >
     )
 
 };

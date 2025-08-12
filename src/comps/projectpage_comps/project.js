@@ -48,6 +48,9 @@ const Project = forwardRef(function Project(props, ref) {
         window.open(liveLink, '_blank', 'noopener,noreferrer');
     };
 
+    const img_w = 500;
+    const img_h = img_w / 2.086;
+
     return (
         <div ref={ref} className={`project ${is_current}`}>
 
@@ -71,30 +74,17 @@ const Project = forwardRef(function Project(props, ref) {
             </div>
 
             <div className='proj-right'>
-                <Image
-                    onClick={() => openImage(images[0])}
-                    className='proj-img'
-                    src={images[0]}
-                    alt={`${title}-image`}
-                    width={500}
-                    height={239.69}
-                />
-                <Image
-                    onClick={() => openImage(images[1])}
-                    className='proj-img'
-                    src={images[1]}
-                    alt={`${title}-image`}
-                    width={500}
-                    height={239.69}
-                />
-                <Image
-                    onClick={() => openImage(images[2])}
-                    className='proj-img'
-                    src={images[2]}
-                    alt={`${title}-image`}
-                    width={500}
-                    height={239.69}
-                />
+                {images.map((image, index) => (
+                    <Image
+                        key={index}
+                        onClick={() => openImage(image)}
+                        className='proj-img'
+                        src={image[0]}
+                        alt={`${image[1]}-image`}
+                        width={img_w}
+                        height={img_h}
+                    />
+                ))}
             </div>
 
         </div>

@@ -39,12 +39,12 @@ const PegasusProj = {
         </ul>
     </div>,
     images: [
-        "/images/prj-screenshots/pegasus1.jpg",
-        "/images/prj-screenshots/pegasus2.jpg",
-        "/images/prj-screenshots/pegasus3.jpg"
+        ["/images/prj-screenshots/pegasus1.jpg", 'Homepage & Flight Search'],
+        ["/images/prj-screenshots/pegasus2.jpg", 'Admin Interface: Flights Display'],
+        ["/images/prj-screenshots/pegasus3.jpg", 'Admin Interface: Manage Customers']
     ],
     skills: ['MSSQL', 'Flask', 'HTML', 'CSS'],
-    gitLink: "",
+    gitLink: "https://github.com/MirShukhman/Project-2-Flights-Website",
     liveLink: ""
 };
 
