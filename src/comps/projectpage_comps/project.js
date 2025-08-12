@@ -1,8 +1,9 @@
 'use client';
 
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 
 import Image from 'next/image'
+import Popup from "./popup/popup";
 import './project.css'
 import { norm_font, wide_font_fat } from '../fonts'
 import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe } from "react-icons/fa";
@@ -11,13 +12,13 @@ import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
 const Project = forwardRef(function Project(props, ref) {
-    const title = props.title
-    const about = props.about
-    const images = props.images
-    const skills = props.skills
-    const gitLink = props.gitLink
-    const liveLink = props.liveLink
-    const is_current = props.is_current
+    const title = props.title;
+    const about = props.about;
+    const images = props.images;
+    const skills = props.skills;
+    const gitLink = props.gitLink;
+    const liveLink = props.liveLink;
+    const is_current = props.is_current;
 
     const skillsDict = {
         'MSSQL': <div className={`used-skill ${norm_font.className}`} ><DiMsqlServer className="used-skill-icon" />MSSQL</div>,
@@ -27,7 +28,17 @@ const Project = forwardRef(function Project(props, ref) {
         'React': <div className={`used-skill ${norm_font.className}`}><FaReact className="used-skill-icon" />React</div>,
         'HTML': <div className={`used-skill ${norm_font.className}`}><FaHtml5 className="used-skill-icon" />HTML</div>,
         'CSS': <div className={`used-skill ${norm_font.className}`}><FaCss3Alt className="used-skill-icon" />CSS</div>
-    }
+    };
+
+    const [imagePopUp, setImagePopUp] = useState(null);
+
+    const openImage = (image) => {
+        setImagePopUp(image)
+    };
+
+    const closeImage = () => {
+        setImagePopUp(null)
+    };
 
     const goToCode = () => {
         window.open(gitLink, '_blank', 'noopener,noreferrer');
@@ -39,6 +50,8 @@ const Project = forwardRef(function Project(props, ref) {
 
     return (
         <div ref={ref} className={`project ${is_current}`}>
+
+            {imagePopUp && <Popup setImage={openImage} closeImage={closeImage} proj_images={images} current_image={imagePopUp} />}
 
             <div className='proj-left'>
                 <div className={`proj-title ${norm_font.className}`}>{title}</div>
@@ -58,19 +71,25 @@ const Project = forwardRef(function Project(props, ref) {
             </div>
 
             <div className='proj-right'>
-                <Image className='proj-img'
+                <Image
+                    onClick={() => openImage(images[0])}
+                    className='proj-img'
                     src={images[0]}
                     alt={`${title}-image`}
                     width={500}
                     height={239.69}
                 />
-                <Image className='proj-img'
+                <Image
+                    onClick={() => openImage(images[1])}
+                    className='proj-img'
                     src={images[1]}
                     alt={`${title}-image`}
                     width={500}
                     height={239.69}
                 />
-                <Image className='proj-img'
+                <Image
+                    onClick={() => openImage(images[2])}
+                    className='proj-img'
                     src={images[2]}
                     alt={`${title}-image`}
                     width={500}

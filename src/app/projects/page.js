@@ -19,7 +19,7 @@ export default function ProjectsPage() {
 
     const moveRight = () => {
         if (current === 0) {
-            setCurrent(2)
+            setCurrent(3)
         } else {
             setCurrent(current - 1)
         }
