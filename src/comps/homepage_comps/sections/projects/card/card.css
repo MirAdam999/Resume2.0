@@ -1,0 +1,75 @@
+.card {
+    height: 100%;
+}
+
+.card-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--grayfont);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#card-skills {
+    margin-top: 0;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#card-skills .used-skill {
+    font-size: 15px;
+}
+
+#card-skills .used-skill-icon {
+    font-size: 35px;
+}
+
+.short-descript {
+    color: var(--grayfont);
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    cursor: pointer;
+    color: var(--blue);
+    font-size: 20px;
+    background-color: white;
+    border: solid 2px var(--blue);
+    border-radius: 5px;
+    width: 180px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-button:hover {
+    transform: scale(1.05);
+    background-color: var(--blue);
+    color: white;
+}
+
+.card-button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#prj-link {
+    text-decoration: none;
+}

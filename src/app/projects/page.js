@@ -34,9 +34,6 @@ export default function ProjectsPage() {
     }
 
     useEffect(() => {
-        console.log(refB)
-        console.log(refB.current)
-        console.log(refB.current.offsetHeight)
         if (!refB.current) return;
         setHeight(refB.current.offsetHeight);
     }, [current]);
@@ -71,7 +68,8 @@ export default function ProjectsPage() {
             </div>
 
             <div className="project-wrapper" style={{ height: height }}>
-                <Project title={EqupmentProj.title}
+                <Project
+                    title={EqupmentProj.title}
                     about={EqupmentProj.about}
                     images={EqupmentProj.images}
                     skills={EqupmentProj.skills}
@@ -80,7 +78,8 @@ export default function ProjectsPage() {
                     is_current={current === 0 ? 'current_proj' : ''}
                     ref={current === 0 ? refB : null}
                 />
-                <Project title={EventhubProj.title}
+                <Project
+                    title={EventhubProj.title}
                     about={EventhubProj.about}
                     images={EventhubProj.images}
                     skills={EventhubProj.skills}
@@ -89,7 +88,8 @@ export default function ProjectsPage() {
                     is_current={current === 1 ? 'current_proj' : ''}
                     ref={current === 1 ? refB : null}
                 />
-                <Project title={SmishingProj.title}
+                <Project
+                    title={SmishingProj.title}
                     about={SmishingProj.about}
                     images={SmishingProj.images}
                     skills={SmishingProj.skills}
@@ -98,7 +98,8 @@ export default function ProjectsPage() {
                     is_current={current === 2 ? 'current_proj' : ''}
                     ref={current === 2 ? refB : null}
                 />
-                <Project title={PegasusProj.title}
+                <Project
+                    title={PegasusProj.title}
                     about={PegasusProj.about}
                     images={PegasusProj.images}
                     skills={PegasusProj.skills}

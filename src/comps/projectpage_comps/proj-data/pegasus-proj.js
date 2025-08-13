@@ -38,6 +38,7 @@ const PegasusProj = {
             </li>
         </ul>
     </div>,
+    short_descript: 'A flight management system for airlines, travel agencies, and private travelers. Features include a robust database schema, role-based access control, secure customer and airline management, comprehensive flight scheduling, and an integrated ticketing system ensuring data integrity and efficient operations.',
     images: [
         ["/images/prj-screenshots/pegasus1.jpg", 'Homepage & Flight Search'],
         ["/images/prj-screenshots/pegasus2.jpg", 'Admin Interface: Flights Display'],

@@ -2,13 +2,27 @@
 
 import './contact.css'
 import { wide_font, norm_font, handwriting } from '@/comps/fonts';
-
+import { useRef } from 'react';
 import { VscGithubAlt } from "react-icons/vsc";
 import { IoDocumentTextOutline, IoMailOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 
 export default function Contact() {
+    const copyRef = useRef(null)
+
+    const handleCopy = () => {
+        if (copyRef.current) {
+            const textToCopy = copyRef.current.innerText
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    alert('Copied!')
+                })
+                .catch(err => {
+                    console.error('Failed to copy:', err)
+                })
+        }
+    }
 
     const DownloadCV = () => {
         const link = document.createElement('a');
@@ -26,8 +40,14 @@ export default function Contact() {
 
             <div id="contact-info" className={norm_font.className}>
                 <div className="contact-left">
-                    <div id='contact-sec'><FiPhoneCall className="contact-icon" /><span>+1 (431) 554-1539</span></div>
-                    <div id='contact-sec'><IoMailOutline className="contact-icon" /><span>miriamsh888@gmail.com</span></div>
+                    <div id='contact-sec'>
+                        <FiPhoneCall className="contact-icon" />
+                        <span ref={copyRef} onClick={handleCopy}>+1 (431) 554-1539</span>
+                    </div>
+                    <div id='contact-sec'>
+                        <IoMailOutline className="contact-icon" />
+                        <span ref={copyRef} onClick={handleCopy}>miriamsh888@gmail.com</span>
+                    </div>
                 </div>
 
                 <div className="contact-right">

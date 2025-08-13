@@ -37,6 +37,7 @@ const EqupmentProj = {
             For your convenience, demo user data is available on the login page.
         </p>
     </div>,
+    short_descript: 'System for multi-branch organizations where Equipment orders are consolidated and overseen by a Global Manager. The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches, consolidates orders, and coordinates with suppliers. The Global Manager controls user access, manages equipment availability, and flags certain items for approval before orders are sent externally. *The System is designed primarily in Hebrew. This is an early version of a later system I have developed for a multi-branch clinic.',
     images: [
         ["/images/prj-screenshots/equpment1.png", 'Global Admin Interface: Manage Orders'],
         ["/images/prj-screenshots/equpment2.png", 'Branch Admin Interface: Create Order'],

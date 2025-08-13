@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     width: 1200px;
-    overflow: hidden;
+
 }
 
 .carusel-inner {
@@ -13,40 +13,43 @@
     justify-content: center;
     position: relative;
     width: 1080px;
-    height: calc(101vh - 250px);
+    height: calc(101vh - 350px);
 }
 
 .proj-on-carusel {
     position: absolute;
     transition: all 1s ease;
-    width: 800px;
-    height: 100%;
+    width: 990px;
+    height: calc(101vh - 250px);
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Center project */
 .proj-on-carusel.center {
+    opacity: 1;
     transform: translateX(0) scale(1.1);
     z-index: 3;
-    background: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-/* Left neighbor */
 .proj-on-carusel.left {
+    opacity: 0.6;
     transform: translateX(-420px) scale(0.9);
     z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    pointer-events: none;
 }
 
-/* Right neighbor */
 .proj-on-carusel.right {
+    opacity: 0.6;
     transform: translateX(420px) scale(0.9);
     z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    pointer-events: none;
 }
 
-/* Hidden projects */
 .proj-on-carusel.hidden {
     opacity: 0;
     pointer-events: none;
@@ -54,13 +57,33 @@
 
 .carousel-btn {
     position: relative;
-    color: blue;
-    font-size: 60px;
+
     transition: ease 0.3s;
     cursor: pointer;
     z-index: 90;
 }
 
-.carousel-btn:hover {
-    transform: scale(1.2);
+#carousel-btn-l {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 35px solid rgba(255, 222, 89);
+    border-bottom: 25px solid transparent;
+    transform: scaleY(1.5);
+    border-radius: 5px;
+}
+
+#carousel-btn-r {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 35px solid rgba(255, 222, 89);
+    border-bottom: 25px solid transparent;
+    transform: scaleY(1.5);
+    border-radius: 5px;
+}
+
+#carousel-btn-l:hover,
+#carousel-btn-r:hover {
+    transform: scaleY(1.95) scaleX(1.3);
 }

@@ -31,6 +31,7 @@ const EventhubProj = {
             </ul>
         </div>
     ,
+    short_descript: 'A community event management platform with a seamless, responsive interface for creating, discovering, and registering for events. Users can manage profiles, host or attend events, and share feedback and photos, fostering stronger community connections.',
     images: [
         ["/images/prj-screenshots/eventhub1.jpg", 'Homepage'],
         ["/images/prj-screenshots/eventhub2.jpg", 'Passed & Attended Event Image Gallery'],
