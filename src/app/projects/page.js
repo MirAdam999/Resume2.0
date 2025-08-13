@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import Project from "@/comps/projectpage_comps/project"
 import EqupmentProj from "@/comps/projectpage_comps/proj-data/equpment-proj";
@@ -13,6 +14,8 @@ import { SlArrowLeftCircle, SlArrowRightCircle } from "react-icons/sl";
 import './projects_page.css'
 
 export default function ProjectsPage() {
+    const searchParams = useSearchParams();
+    const projectParam = searchParams.get("project");
     const [current, setCurrent] = useState(0)
     const refB = useRef(null);
     const [height, setHeight] = useState(0);
@@ -36,7 +39,14 @@ export default function ProjectsPage() {
     useEffect(() => {
         if (!refB.current) return;
         setHeight(refB.current.offsetHeight);
+
     }, [current]);
+
+    useEffect(() => {
+        if (projectParam !== null) {
+            setCurrent(Number(projectParam));
+        }
+    }, [projectParam]);
 
     return (
         <div id='projects-page'>

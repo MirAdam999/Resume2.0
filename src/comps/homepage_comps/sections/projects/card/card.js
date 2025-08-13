@@ -16,6 +16,7 @@ const ProjCard = (props) => {
     const skills = props.skills;
     const gitLink = props.gitLink;
     const liveLink = props.liveLink;
+    const current = props.current;
     const img_width = 330;
     const img_height = img_width / 2.086;
 
@@ -67,7 +68,12 @@ const ProjCard = (props) => {
 
             <div className='card-buttons'>
                 <button className={`card-button ${norm_font.className}`} onClick={goToCode}><FaGithub />Code</button>
-                <Link href="/projects" passHref id='prj-link'><button className={`card-button ${norm_font.className}`}>Read More</button></Link>
+                <Link href={{
+                    pathname: '/projects',
+                    query: { project: current }
+                }} passHref id='prj-link'>
+                    <button className={`card-button ${norm_font.className}`}>Read More</button>
+                </Link>
                 <button className={`card-button ${norm_font.className}`} onClick={goToLive}><FaGlobe />Live Demo</button>
             </div>
         </div>

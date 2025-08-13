@@ -8,43 +8,47 @@ import EventhubProj from '@/comps/projectpage_comps/proj-data/eventhub-proj';
 import SmishingProj from '@/comps/projectpage_comps/proj-data/smishing-proj';
 import PegasusProj from '@/comps/projectpage_comps/proj-data/pegasus-proj';
 
-const projects = [
-    <ProjCard
-        title={EqupmentProj.title}
-        short_descript={EqupmentProj.short_descript}
-        images={EqupmentProj.images}
-        skills={EqupmentProj.skills}
-        gitLink={EqupmentProj.gitLink}
-        liveLink={EqupmentProj.liveLink}
-    />,
-    <ProjCard
-        title={EventhubProj.title}
-        short_descript={EventhubProj.short_descript}
-        images={EventhubProj.images}
-        skills={EventhubProj.skills}
-        gitLink={EventhubProj.gitLink}
-        liveLink={EventhubProj.liveLink}
-    />,
-    <ProjCard
-        title={SmishingProj.title}
-
-        images={SmishingProj.images}
-        skills={SmishingProj.skills}
-        gitLink={SmishingProj.gitLink}
-        liveLink={SmishingProj.liveLink}
-    />,
-    <ProjCard
-        title={PegasusProj.title}
-        short_descript={PegasusProj.short_descript}
-        images={PegasusProj.images}
-        skills={PegasusProj.skills}
-        gitLink={PegasusProj.gitLink}
-        liveLink={PegasusProj.liveLink}
-    />
-]
-
 export default function Carousel() {
     const [current, setCurrent] = useState(0)
+
+    const projects = [
+        <ProjCard
+            title={EqupmentProj.title}
+            short_descript={EqupmentProj.short_descript}
+            images={EqupmentProj.images}
+            skills={EqupmentProj.skills}
+            gitLink={EqupmentProj.gitLink}
+            liveLink={EqupmentProj.liveLink}
+            current={current}
+        />,
+        <ProjCard
+            title={EventhubProj.title}
+            short_descript={EventhubProj.short_descript}
+            images={EventhubProj.images}
+            skills={EventhubProj.skills}
+            gitLink={EventhubProj.gitLink}
+            liveLink={EventhubProj.liveLink}
+            current={current}
+        />,
+        <ProjCard
+            title={SmishingProj.title}
+
+            images={SmishingProj.images}
+            skills={SmishingProj.skills}
+            gitLink={SmishingProj.gitLink}
+            liveLink={SmishingProj.liveLink}
+            current={current}
+        />,
+        <ProjCard
+            title={PegasusProj.title}
+            short_descript={PegasusProj.short_descript}
+            images={PegasusProj.images}
+            skills={PegasusProj.skills}
+            gitLink={PegasusProj.gitLink}
+            liveLink={PegasusProj.liveLink}
+            current={current}
+        />
+    ]
 
     const goRight = () => {
         if (current >= projects.length - 1) {
