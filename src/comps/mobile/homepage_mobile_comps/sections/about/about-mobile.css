@@ -1,0 +1,10 @@
+#about-mobile #header {
+    color: var(--blue);
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#about-mobile #about-text {
+    padding-bottom: 30px;
+}

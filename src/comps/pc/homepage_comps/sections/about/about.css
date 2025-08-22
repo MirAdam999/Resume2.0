@@ -1,0 +1,28 @@
+#about {
+    min-width: 1200px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 100%;
+    margin-top: 80px;
+}
+
+#about #header {
+    color: var(--blue);
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.about-left {
+    align-self: center;
+    text-align: left;
+    margin-right: 200px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.about-right {
+    align-self: flex-end;
+    height: 600px;
+}

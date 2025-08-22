@@ -1,3 +1,9 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -7,10 +13,10 @@
     width: 100%;
     color: var(--grayfont);
     padding-top: 50px;
+    box-sizing: border-box;
 }
 
-/*navbar*/
-
+/*PC*/
 /*sections*/
 
 .section-parent {
@@ -31,18 +37,18 @@
 
 #projetcs-parent {
     background-color: var(--blue);
-    height: calc(101vh);
+
     width: 100%;
     text-align: center;
     justify-content: center;
     align-content: center;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-sizing: border-box;
 }
 
 /*about*/
 
 #about-parent {
-    height: 85vh;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -70,6 +76,55 @@
     justify-content: center;
     align-content: center;
 }
+
+/*MOBILE*/
+/*sections-mobile*/
+
+.section-parent-mobile {
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100vw;
+}
+
+.section-mobile {
+    width: calc(100vw - 40px);
+    align-self: center;
+    cursor: default;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*projects-mobile*/
+
+#projetcs-parent-mobile {
+    background-color: var(--blue);
+    width: 100%;
+    text-align: left;
+    justify-content: center;
+    align-content: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-sizing: border-box;
+}
+
+/*skills-mobile*/
+
+#skills-parent-mobile {
+    background-color: var(--blue);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+/*contact-mobile*/
+
+#contact-parent-mobile {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
 
 /*footer*/
 

@@ -5,14 +5,25 @@ import { useState, useEffect } from "react";
 import './page.css'
 import { norm_font } from "../comps/fonts";
 
-import Navbar from '../comps/homepage_comps/navbar/navbar';
-import Skills from "../comps/homepage_comps/sections/skills/skills";
-import Contact from "../comps/homepage_comps/sections/contact/contact";
-import About from "../comps/homepage_comps/sections/about/about";
-import Projects from "../comps/homepage_comps/sections/projects/projects";
-import Landing from "../comps/homepage_comps/sections/landing/landing";
+import Navbar from '../comps/pc/homepage_comps/navbar/navbar';
+import Skills from "../comps/pc/homepage_comps/sections/skills/skills";
+import Contact from "../comps/pc/homepage_comps/sections/contact/contact";
+import About from "../comps/pc/homepage_comps/sections/about/about";
+import Projects from "../comps/pc/homepage_comps/sections/projects/projects";
+import Landing from "../comps/pc/homepage_comps/sections/landing/landing";
+
+import MobileNav from "@/comps/mobile/homepage_mobile_comps/nav/mobile-nav";
+import LandingMobile from "@/comps/mobile/homepage_mobile_comps/sections/landing/landing-mobile";
+import ProjectsMobile from "@/comps/mobile/homepage_mobile_comps/sections/projects/projects-mobile";
+import AboutMobile from "@/comps/mobile/homepage_mobile_comps/sections/about/about-mobile";
+import SKillsMobile from "@/comps/mobile/homepage_mobile_comps/sections/skills/skills-mobile";
+import ContactMobile from "@/comps/mobile/homepage_mobile_comps/sections/contact/contact-mobile";
+
+import Loading from "@/comps/loading/loading";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [isPC, setIsPC] = useState(true);
   const [shrink, setShrink] = useState(false);
   const [navbarLinkActive, setNavbarLinkActive] = useState('landing-parent');
 
@@ -40,39 +51,62 @@ export default function Home() {
     window.addEventListener('scroll', navbarShrinkOnScroll);
     window.addEventListener('scroll', updateActiveSection);
 
+    const checkSize = () => setIsPC(window.innerWidth >= 768);
+    checkSize();
+    setLoading(false);
+
     return () => {
       window.removeEventListener('scroll', navbarShrinkOnScroll);
       window.removeEventListener('scroll', updateActiveSection);
     };
+
   }, []);
 
-  return (
-    <div className="main">
+  if (loading) {
+    return (
+      <div className="loading"><Loading /></div>
+    )
+  } else {
+    return (
+      <div className="main">
 
-      <Navbar shrink={shrink} navbarLinkActive={navbarLinkActive} setNavbarLinkActive={setNavbarLinkActive} />
+        {isPC ?
+          <Navbar shrink={shrink} navbarLinkActive={navbarLinkActive} setNavbarLinkActive={setNavbarLinkActive} /> :
+          <MobileNav />}
 
-      <div className="section-parent" id='landing-parent'>
-        <Landing />
-      </div>
+        <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`landing-parent${isPC ? "" : "-mobile"}`}>
+          {isPC ?
+            <Landing /> :
+            <LandingMobile />}
+        </div>
 
-      <div className="section-parent" id='projetcs-parent'>
-        <Projects />
-      </div>
+        <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`projetcs-parent${isPC ? "" : "-mobile"}`}>
+          {isPC ?
+            <Projects /> :
+            <ProjectsMobile />}
+        </div>
 
-      <div className="section-parent" id="about-parent">
-        <About />
-      </div>
+        <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`about-parent${isPC ? "" : "-mobile"}`}>
+          {isPC ?
+            <About /> :
+            <AboutMobile />}
+        </div>
 
-      <div className="section-parent" id="skills-parent">
-        <Skills />
-      </div>
+        <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`skills-parent${isPC ? "" : "-mobile"}`}>
+          {isPC ?
+            <Skills /> :
+            <SKillsMobile />}
+        </div>
 
-      <div className="section-parent" id="contact-parent">
-        <Contact />
-      </div>
+        <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`contact-parent${isPC ? "" : "-mobile"}`}>
+          {isPC ?
+            <Contact /> :
+            <ContactMobile />}
+        </div>
 
-      <footer className={norm_font.className}>	&copy; Miriam Adam 2025</footer>
+        <footer className={norm_font.className}>	&copy; Miriam Adam 2025</footer>
 
-    </div >
-  );
+      </div >
+    );
+  };
 }

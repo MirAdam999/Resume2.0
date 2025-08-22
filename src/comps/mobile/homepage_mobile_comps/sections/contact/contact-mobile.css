@@ -1,0 +1,25 @@
+#contact-mobile #header {
+    font-size: 40px;
+    color: var(--blue);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#contact-mobile #contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-mobile #contact-sec {
+    width: 330px;
+}
+
+#contact-mobile .contact-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+
+#contact-mobile #contact-sec:active::after {
+    width: 100%;
+}
