@@ -16,6 +16,7 @@ export default function ProjectsMobile() {
             skills={EqupmentProj.skills}
             gitLink={EqupmentProj.gitLink}
             liveLink={EqupmentProj.liveLink}
+            index={0}
         />,
         <ProjCardMobile
             title={EventhubProj.title}
@@ -24,6 +25,7 @@ export default function ProjectsMobile() {
             skills={EventhubProj.skills}
             gitLink={EventhubProj.gitLink}
             liveLink={EventhubProj.liveLink}
+            index={1}
         />,
         <ProjCardMobile
             title={SmishingProj.title}
@@ -32,6 +34,7 @@ export default function ProjectsMobile() {
             skills={SmishingProj.skills}
             gitLink={SmishingProj.gitLink}
             liveLink={SmishingProj.liveLink}
+            index={2}
         />,
         <ProjCardMobile
             title={PegasusProj.title}
@@ -40,6 +43,7 @@ export default function ProjectsMobile() {
             skills={PegasusProj.skills}
             gitLink={PegasusProj.gitLink}
             liveLink={PegasusProj.liveLink}
+            index={3}
         />
     ]
 

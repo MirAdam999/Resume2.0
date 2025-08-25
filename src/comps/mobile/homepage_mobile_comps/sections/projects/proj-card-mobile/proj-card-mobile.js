@@ -18,15 +18,16 @@ const ProjCardMobile = (props) => {
     const liveLink = props.liveLink;
     const img_width = 330;
     const img_height = img_width / 2.086;
+    const index = props.index;
 
     const skillsDict = {
-        'MSSQL': <div className={`used-skill ${norm_font.className}`} ><DiMsqlServer className="used-skill-icon" />MSSQL</div>,
-        'MySQL': <div className={`used-skill ${norm_font.className}`}><GrMysql className="used-skill-icon" />MySQL</div>,
-        'Django': <div className={`used-skill ${norm_font.className}`}><SiDjango className="used-skill-icon" />Django</div>,
-        'Flask': <div className={`used-skill ${norm_font.className}`}><SiFlask className="used-skill-icon" />Flask</div>,
-        'React': <div className={`used-skill ${norm_font.className}`}><FaReact className="used-skill-icon" />React</div>,
-        'HTML': <div className={`used-skill ${norm_font.className}`}><FaHtml5 className="used-skill-icon" />HTML</div>,
-        'CSS': <div className={`used-skill ${norm_font.className}`}><FaCss3Alt className="used-skill-icon" />CSS</div>
+        'MSSQL': <div className={`used-skill ${norm_font.className}`} ><DiMsqlServer className="used-skill-icon" /></div>,
+        'MySQL': <div className={`used-skill ${norm_font.className}`}><GrMysql className="used-skill-icon" /></div>,
+        'Django': <div className={`used-skill ${norm_font.className}`}><SiDjango className="used-skill-icon" /></div>,
+        'Flask': <div className={`used-skill ${norm_font.className}`}><SiFlask className="used-skill-icon" /></div>,
+        'React': <div className={`used-skill ${norm_font.className}`}><FaReact className="used-skill-icon" /></div>,
+        'HTML': <div className={`used-skill ${norm_font.className}`}><FaHtml5 className="used-skill-icon" /></div>,
+        'CSS': <div className={`used-skill ${norm_font.className}`}><FaCss3Alt className="used-skill-icon" /></div>
     };
 
     const goToCode = () => {
@@ -48,24 +49,24 @@ const ProjCardMobile = (props) => {
                     height={img_height}
                 />
             </div>
-            <div>{title}</div>
-            <div className='proj-used-skilles' id='card-skills'>
+            <div className={`${norm_font_fat.className}`} id='proj-mobile-card-title'>{title}</div>
+            <div className='proj-used-skilles' id='card-skills-mobile'>
                 {skills.map((skill, index) => (
                     <div className="used-skill-parent" key={index}>{skillsDict[skill]}</div>
                 ))}
             </div>
-            <div>{short_descript}</div>
-            <div className='card-buttons'>
-                <button className={`card-button ${norm_font.className}`} onClick={goToCode}><FaGithub />Code</button>
+            <div className={`${norm_font.className}`} id='proj-mobile-card-descript'>{short_descript}</div>
+            <div className='card-buttons-mobile'>
+                <button className={`card-button ${norm_font.className}`} id='card-button-mobile' onClick={goToCode}>Code</button>
                 <Link href={{
                     pathname: '/projects',
-
+                    query: { project: index }
                 }} passHref id='prj-link'>
-                    <button className={`card-button ${norm_font.className}`}>Read More</button>
+                    <button className={`card-button ${norm_font.className}`} id='card-button-mobile-middle'>Read More</button>
                 </Link>
-                <button className={`card-button ${norm_font.className}`} onClick={goToLive}><FaGlobe />Live Demo</button>
+                <button className={`card-button ${norm_font.className}`} id='card-button-mobile' onClick={goToLive}>Live Demo</button>
             </div>
-        </div>
+        </div >
     );
 };
 
