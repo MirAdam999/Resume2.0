@@ -1,0 +1,68 @@
+#project-mobile {
+    min-width: calc(100vw - 40px);
+    width: calc(100vw - 40px);
+    display: unset;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-mobile-wrapper .proj-title {
+    font-size: 30px;
+}
+
+.project-mobile-wrapper .proj-about h4,
+.project-mobile-wrapper .proj-about p,
+.project-mobile-wrapper .proj-about ul {
+    font-size: 15px;
+}
+
+.project-mobile-wrapper .proj-about h3 {
+    font-size: 20px;
+}
+
+.proj-links-mobile {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.proj-link-mobile {
+    background-color: var(--grayfont);
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    transition: ease 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+#proj-link-mobile-icon {
+    font-size: 25px;
+}
+
+.proj-link-mobile:active {
+    box-shadow: var(--yellow) 0px 0px 0px 3px;
+    transform: scale(0.9);
+}
+
+#project-mobile-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

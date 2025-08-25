@@ -8,6 +8,7 @@ import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe } from "react-icons/fa";
 import { SiDjango, SiFlask } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
+import { BsThreeDots } from "react-icons/bs";
 
 const ProjCardMobile = (props) => {
     const title = props.title;
@@ -40,32 +41,47 @@ const ProjCardMobile = (props) => {
 
     return (
         <div className='project-mobile-card'>
-            <div>
-                <Image
-                    className='card-img'
-                    src={images[0][0]}
-                    alt={`${images[0][1]}-image`}
-                    width={img_width}
-                    height={img_height}
-                />
+
+            <Link href={{
+                pathname: '/projects_mobile',
+                query: { project: index }
+            }} passHref id='prj-link'>
+                <div>
+                    <Image
+                        className='card-img'
+                        src={images[0][0]}
+                        alt={`${images[0][1]}-image`}
+                        width={img_width}
+                        height={img_height}
+                    />
+                </div>
+            </Link>
+
+            <div className={`${norm_font_fat.className}`} id='proj-mobile-card-title'>
+                {title}
             </div>
-            <div className={`${norm_font_fat.className}`} id='proj-mobile-card-title'>{title}</div>
+
             <div className='proj-used-skilles' id='card-skills-mobile'>
                 {skills.map((skill, index) => (
                     <div className="used-skill-parent" key={index}>{skillsDict[skill]}</div>
                 ))}
             </div>
-            <div className={`${norm_font.className}`} id='proj-mobile-card-descript'>{short_descript}</div>
+
+            <div className={`${norm_font.className}`} id='proj-mobile-card-descript'>
+                {short_descript}
+            </div>
+
             <div className='card-buttons-mobile'>
-                <button className={`card-button ${norm_font.className}`} id='card-button-mobile' onClick={goToCode}>Code</button>
+                <button className={`card-button ${norm_font.className}`} id='card-button-mobile-icon' onClick={goToCode}><FaGithub /></button>
+                <button className={`card-button ${norm_font.className}`} id='card-button-mobile-icon' onClick={goToLive}><FaGlobe /></button>
                 <Link href={{
-                    pathname: '/projects',
+                    pathname: '/projects_mobile',
                     query: { project: index }
                 }} passHref id='prj-link'>
-                    <button className={`card-button ${norm_font.className}`} id='card-button-mobile-middle'>Read More</button>
+                    <button className={`card-button ${norm_font.className}`} id='card-button-mobile-icon'><BsThreeDots /></button>
                 </Link>
-                <button className={`card-button ${norm_font.className}`} id='card-button-mobile' onClick={goToLive}>Live Demo</button>
             </div>
+
         </div >
     );
 };

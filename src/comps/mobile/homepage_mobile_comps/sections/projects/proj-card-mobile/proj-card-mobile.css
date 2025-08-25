@@ -27,22 +27,32 @@
 }
 
 .card-buttons-mobile {
+    max-width: 100%;
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
 }
 
-#card-button-mobile {
-    border-radius: 5px;
-    font-size: 16px;
-    width: 90px;
-}
-
-#card-button-mobile-middle {
+#card-button-mobile-icon {
+    background-color: var(--grayfont);
+    border-radius: 60px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    background-color: var(--blue);
-    font-size: 16px;
-    width: 90px;
+    border: none;
+    font-size: 28px;
+    transition: ease 0.3s;
+}
+
+#card-button-mobile-icon:active {
+    box-shadow: var(--yellow) 0px 0px 0px 3px;
+    transform: scale(0.9);
 }

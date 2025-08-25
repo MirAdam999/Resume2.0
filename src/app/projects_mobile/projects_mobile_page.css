@@ -1,0 +1,99 @@
+#projects-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    cursor: default;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    background-color: var(--blue);
+    min-height: calc(100vh - 30px);
+    overflow: hidden;
+}
+
+#pp-top {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#pp-header {
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+
+#pph-myname {
+    color: white;
+    padding-left: 10px;
+}
+
+#pph-projects {
+    color: var(--blue);
+    background-color: rgba(255, 222, 89, 0.88);
+    font-weight: 800;
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#pp-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.icon-wrapper {
+    color: white;
+    cursor: pointer;
+    transition: ease 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-icom-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-icon {
+    font-size: 35px;
+    color: white;
+    padding: 0;
+}
+
+.icon-wrapper:active {
+    transform: scale(1.1);
+}
+
+#nav-label {
+    background-color: var(--blue);
+    color: white;
+    font-size: 20px;
+}
+
+.project-wrapper {
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    align-self: center;
+    width: 100vw;
+    cursor: default;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    bottom: 0;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
