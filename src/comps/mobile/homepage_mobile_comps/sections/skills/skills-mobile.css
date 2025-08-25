@@ -2,3 +2,51 @@
     display: flex;
     flex-direction: column;
 }
+
+#skills-mobile #header {
+    color: white;
+    font-size: 40px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#skills-txt-mobile {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#skills-txt-mobile span {
+    position: relative;
+    animation: revealBackground 1.5s ease forwards;
+    background-color: var(--yellow);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bolder;
+}
+
+#skills-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#skills-bottom .icon-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+#skills-bottom .icon-set {
+    font-size: 15px;
+}
+
+#skills-bottom .icon {
+    font-size: 30px;
+}

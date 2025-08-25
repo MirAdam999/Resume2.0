@@ -1,4 +1,4 @@
-import '../project.css'
+import '../pc/projectpage_comps/project.css'
 
 const EqupmentProj = {
     title: "Equpment Orders Managment System",

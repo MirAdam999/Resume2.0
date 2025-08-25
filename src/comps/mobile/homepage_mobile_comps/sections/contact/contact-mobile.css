@@ -1,25 +1,72 @@
+#contact-mobile {
+    width: 280px;
+}
+
 #contact-mobile #header {
-    font-size: 40px;
+    font-size: 38px;
     color: var(--blue);
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-#contact-mobile #contact-info {
+#contact-info-mobile {
     display: flex;
     flex-direction: column;
 }
 
-#contact-mobile #contact-sec {
-    width: 330px;
+#contact-info-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact-info-top a {
+    background-color: var(--grayfont);
+    border-radius: 60px;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--yellow) 0px 0px 0px 3px;
+}
+
+#contact-mobile #contact-info-top .contact-icon {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+}
+
+#contact-mobile #contact-info-top #contact-sec {
+    margin-bottom: 20px;
+    transition: ease 0.3s;
 }
 
 #contact-mobile .contact-icon {
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 10px;
+}
+
+#contact-mobile span {
+    font-size: 20px;
 }
 
 
 #contact-mobile #contact-sec:active::after {
     width: 100%;
+}
+
+#contact-mobile #contact-info-top #contact-sec:active::after {
+    width: 0;
+}
+
+#contact-mobile #contact-info-top #contact-sec:active {
+    transform: scale(0.9);
+}
+
+#contact-mobile #thanks {
+    margin: 0;
+    font-size: 38px;
 }

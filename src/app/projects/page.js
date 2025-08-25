@@ -4,10 +4,10 @@ import { useRef, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import Project from "@/comps/pc/projectpage_comps/project"
-import EqupmentProj from "@/comps/pc/projectpage_comps/proj-data/equpment-proj";
-import EventhubProj from "@/comps/pc/projectpage_comps/proj-data/eventhub-proj";
-import SmishingProj from "@/comps/pc/projectpage_comps/proj-data/smishing-proj";
-import PegasusProj from "@/comps/pc/projectpage_comps/proj-data/pegasus-proj";
+import EqupmentProj from "@/comps/proj-data/equpment-proj";
+import EventhubProj from "@/comps/proj-data/eventhub-proj";
+import SmishingProj from "@/comps/proj-data/smishing-proj";
+import PegasusProj from "@/comps/proj-data/pegasus-proj";
 import { wide_font, norm_font, norm_font_fat } from "@/comps/fonts"
 import { AiFillHome } from "react-icons/ai";
 import { SlArrowLeftCircle, SlArrowRightCircle } from "react-icons/sl";

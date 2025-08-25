@@ -2,21 +2,20 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import './card.css'
+import './proj-card-mobile.css'
 import { norm_font, norm_font_fat } from '@/comps/fonts';
 import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe } from "react-icons/fa";
 import { SiDjango, SiFlask } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
-const ProjCard = (props) => {
+const ProjCardMobile = (props) => {
     const title = props.title;
     const short_descript = props.short_descript;
     const images = props.images.slice(0, 3);
     const skills = props.skills;
     const gitLink = props.gitLink;
     const liveLink = props.liveLink;
-    const current = props.current;
     const img_width = 330;
     const img_height = img_width / 2.086;
 
@@ -39,50 +38,35 @@ const ProjCard = (props) => {
     };
 
     return (
-        <div className={`card ${norm_font.className}`}>
-
-            <div className='images-trio'>
-                {images.map((image, index) => (
-                    <Image
-                        key={index}
-                        className='card-img'
-                        src={image[0]}
-                        alt={`${image[1]}-image`}
-                        width={img_width}
-                        height={img_height}
-                    />
+        <div className='project-mobile-card'>
+            <div>
+                <Image
+                    className='card-img'
+                    src={images[0][0]}
+                    alt={`${images[0][1]}-image`}
+                    width={img_width}
+                    height={img_height}
+                />
+            </div>
+            <div>{title}</div>
+            <div className='proj-used-skilles' id='card-skills'>
+                {skills.map((skill, index) => (
+                    <div className="used-skill-parent" key={index}>{skillsDict[skill]}</div>
                 ))}
             </div>
+            <div>{short_descript}</div>
+            <div className='card-buttons'>
+                <button className={`card-button ${norm_font.className}`} onClick={goToCode}><FaGithub />Code</button>
+                <Link href={{
+                    pathname: '/projects',
 
-            <div className='card-txt'>
-                <div className={`card-title ${norm_font_fat.className}`}>{title}</div>
-
-                <div className='proj-used-skilles' id='card-skills'>
-                    {skills.map((skill, index) => (
-                        <div className="used-skill-parent" key={index}>{skillsDict[skill]}</div>
-                    ))}
-                </div>
-
-                <div className='short-descript'>
-                    {short_descript}
-                </div>
-
-                <div className='card-buttons'>
-                    <button className={`card-button ${norm_font.className}`} onClick={goToCode}><FaGithub />Code</button>
-                    <Link href={{
-                        pathname: '/projects',
-                        query: { project: current }
-                    }} passHref id='prj-link'>
-                        <button className={`card-button ${norm_font.className}`}>Read More</button>
-                    </Link>
-                    <button className={`card-button ${norm_font.className}`} onClick={goToLive}><FaGlobe />Live Demo</button>
-                </div>
-
+                }} passHref id='prj-link'>
+                    <button className={`card-button ${norm_font.className}`}>Read More</button>
+                </Link>
+                <button className={`card-button ${norm_font.className}`} onClick={goToLive}><FaGlobe />Live Demo</button>
             </div>
-
         </div>
     );
-
 };
 
-export default ProjCard;
+export default ProjCardMobile;

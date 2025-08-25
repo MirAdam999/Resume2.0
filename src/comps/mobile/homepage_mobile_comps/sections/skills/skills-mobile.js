@@ -14,8 +14,8 @@ export default function SKillsMobile() {
 
             <div id="skills-top">
                 <div id='header' className={wide_font.className}>Skills</div>
-                <div id='skills-txt' className={norm_font.className}>
-                    Always <span>looking to learn</span><br />
+                <div id='skills-txt-mobile' className={norm_font.className}>
+                    Always <span>looking to learn </span><br />
                     and expand my skillset
                 </div>
             </div>

@@ -3,10 +3,10 @@
 import { useState } from 'react'
 import './carusel.css'
 import ProjCard from '../card/card';
-import EqupmentProj from '@/comps/pc/projectpage_comps/proj-data/equpment-proj';
-import EventhubProj from '@/comps/pc/projectpage_comps/proj-data/eventhub-proj';
-import SmishingProj from '@/comps/pc/projectpage_comps/proj-data/smishing-proj';
-import PegasusProj from '@/comps/pc/projectpage_comps/proj-data/pegasus-proj';
+import EqupmentProj from '@/comps/proj-data/equpment-proj';
+import EventhubProj from '@/comps/proj-data/eventhub-proj';
+import SmishingProj from '@/comps/proj-data/smishing-proj';
+import PegasusProj from '@/comps/proj-data/pegasus-proj';
 
 export default function Carousel() {
     const [current, setCurrent] = useState(0)
