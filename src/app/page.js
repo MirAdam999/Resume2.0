@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import './page.css'
 import { norm_font } from "../comps/fonts";
+import { IoIosArrowDropupCircle } from "react-icons/io";
 
 import Navbar from '../comps/pc/homepage_comps/navbar/navbar';
 import Skills from "../comps/pc/homepage_comps/sections/skills/skills";
@@ -62,6 +63,14 @@ export default function Home() {
 
   }, []);
 
+  const goUp = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   if (loading) {
     return (
       <div className="loading"><Loading /></div>
@@ -73,6 +82,8 @@ export default function Home() {
         {isPC ?
           <Navbar shrink={shrink} navbarLinkActive={navbarLinkActive} setNavbarLinkActive={setNavbarLinkActive} /> :
           <MobileNav />}
+
+        {isPC ? <a id='go-up' onClick={(e) => goUp(e)}><IoIosArrowDropupCircle /></a> : ''}
 
         <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`landing-parent${isPC ? "" : "-mobile"}`}>
           {isPC ?

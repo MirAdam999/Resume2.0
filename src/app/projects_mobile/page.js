@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from 'next/link';
+import Loading from "@/comps/loading/loading";
 import ProjectMobile from "@/comps/mobile/projectpage_mobile_comps/project_mobile";
 import EqupmentProj from "@/comps/proj-data/equpment-proj";
 import EventhubProj from "@/comps/proj-data/eventhub-proj";
@@ -19,6 +20,7 @@ export default function ProjectsPageMobile() {
     const [current, setCurrent] = useState(0)
     const refB = useRef(null);
     const [height, setHeight] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     const moveRight = () => {
         if (current === 0) {
@@ -39,88 +41,97 @@ export default function ProjectsPageMobile() {
     useEffect(() => {
         if (!refB.current) return;
         setHeight(refB.current.offsetHeight);
-
+        setLoading(false);
     }, [current]);
 
     useEffect(() => {
         if (projectParam !== null) {
             setCurrent(Number(projectParam));
         }
+        setLoading(false);
     }, [projectParam]);
 
-    return (
-        <div id='projects-page'>
-            <div id="pp-top">
 
-                <div id='pp-header'>
-                    <span id='pph-myname' className={norm_font_fat.className}>Miriam Adam</span><br />
-                    <span id='pph-projects' className={wide_font.className}>Projects</span>
-                </div>
+    if (loading) {
+        return (
+            <div className="loading"><Loading /></div>
+        )
 
-                <div id='pp-nav'>
-                    <div className="icon-wrapper">
-                        <SlArrowLeftCircle onClick={moveRight} className="nav-icon" />
+    } else {
+        return (
+            <div id='projects-page'>
+                <div id="pp-top">
 
+                    <div id='pp-header'>
+                        <span id='pph-myname' className={norm_font_fat.className}>Miriam Adam</span><br />
+                        <span id='pph-projects' className={wide_font.className}>Projects</span>
                     </div>
 
-                    <Link href="/" passHref>
-                        <div className="icon-wrapper" id='home-icom-wrapper'>
-                            <AiFillHome className="nav-icon" />
+                    <div id='pp-nav'>
+                        <div className="icon-wrapper">
+                            <SlArrowLeftCircle onClick={moveRight} className="nav-icon" />
+
                         </div>
-                    </Link>
 
-                    <div className="icon-wrapper">
-                        <SlArrowRightCircle onClick={moveLeft} className="nav-icon" />
+                        <Link href="/" passHref>
+                            <div className="icon-wrapper" id='home-icom-wrapper'>
+                                <AiFillHome className="nav-icon" />
+                            </div>
+                        </Link>
 
+                        <div className="icon-wrapper">
+                            <SlArrowRightCircle onClick={moveLeft} className="nav-icon" />
+
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
+                <div className="project-wrapper" style={{ height: height }}>
+                    <ProjectMobile
+                        title={EqupmentProj.title}
+                        about={EqupmentProj.about}
+                        images={EqupmentProj.images}
+                        skills={EqupmentProj.skills}
+                        gitLink={EqupmentProj.gitLink}
+                        liveLink={EqupmentProj.liveLink}
+                        is_current={current === 0 ? 'current_proj' : ''}
+                        ref={current === 0 ? refB : null}
+                    />
+                    <ProjectMobile
+                        title={EventhubProj.title}
+                        about={EventhubProj.about}
+                        images={EventhubProj.images}
+                        skills={EventhubProj.skills}
+                        gitLink={EventhubProj.gitLink}
+                        liveLink={EventhubProj.liveLink}
+                        is_current={current === 1 ? 'current_proj' : ''}
+                        ref={current === 1 ? refB : null}
+                    />
+                    <ProjectMobile
+                        title={SmishingProj.title}
+                        about={SmishingProj.about}
+                        images={SmishingProj.images}
+                        skills={SmishingProj.skills}
+                        gitLink={SmishingProj.gitLink}
+                        liveLink={SmishingProj.liveLink}
+                        is_current={current === 2 ? 'current_proj' : ''}
+                        ref={current === 2 ? refB : null}
+                    />
+                    <ProjectMobile
+                        title={PegasusProj.title}
+                        about={PegasusProj.about}
+                        images={PegasusProj.images}
+                        skills={PegasusProj.skills}
+                        gitLink={PegasusProj.gitLink}
+                        liveLink={PegasusProj.liveLink}
+                        is_current={current === 3 ? 'current_proj' : ''}
+                        ref={current === 3 ? refB : null}
+                    />
+                </div>
 
-            <div className="project-wrapper" style={{ height: height }}>
-                <ProjectMobile
-                    title={EqupmentProj.title}
-                    about={EqupmentProj.about}
-                    images={EqupmentProj.images}
-                    skills={EqupmentProj.skills}
-                    gitLink={EqupmentProj.gitLink}
-                    liveLink={EqupmentProj.liveLink}
-                    is_current={current === 0 ? 'current_proj' : ''}
-                    ref={current === 0 ? refB : null}
-                />
-                <ProjectMobile
-                    title={EventhubProj.title}
-                    about={EventhubProj.about}
-                    images={EventhubProj.images}
-                    skills={EventhubProj.skills}
-                    gitLink={EventhubProj.gitLink}
-                    liveLink={EventhubProj.liveLink}
-                    is_current={current === 1 ? 'current_proj' : ''}
-                    ref={current === 1 ? refB : null}
-                />
-                <ProjectMobile
-                    title={SmishingProj.title}
-                    about={SmishingProj.about}
-                    images={SmishingProj.images}
-                    skills={SmishingProj.skills}
-                    gitLink={SmishingProj.gitLink}
-                    liveLink={SmishingProj.liveLink}
-                    is_current={current === 2 ? 'current_proj' : ''}
-                    ref={current === 2 ? refB : null}
-                />
-                <ProjectMobile
-                    title={PegasusProj.title}
-                    about={PegasusProj.about}
-                    images={PegasusProj.images}
-                    skills={PegasusProj.skills}
-                    gitLink={PegasusProj.gitLink}
-                    liveLink={PegasusProj.liveLink}
-                    is_current={current === 3 ? 'current_proj' : ''}
-                    ref={current === 3 ? refB : null}
-                />
+                <footer className={norm_font.className}>&copy; Miriam Adam 2025</footer>
             </div>
-
-            <footer className={norm_font.className}>&copy; Miriam Adam 2025</footer>
-        </div>
-    )
+        )
+    }
 }

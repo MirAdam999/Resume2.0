@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 import './project_mobile.css'
 import Image from 'next/image'
-import { norm_font, wide_font_fat } from '../../fonts'
+import { norm_font } from '../../fonts'
 import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe } from "react-icons/fa";
 import { SiDjango, SiFlask } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
@@ -76,6 +76,7 @@ const ProjectMobile = forwardRef(function ProjectMobile(props, ref) {
 
         </div>
     )
+
 })
 
 export default ProjectMobile;
