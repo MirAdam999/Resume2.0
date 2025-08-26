@@ -1,0 +1,64 @@
+.stack-animation-mobile {
+    width: 160px;
+    height: 280px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.stack-animation-mobile .rectangle {
+    position: relative;
+    z-index: 3;
+    height: 38px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    top: 10px;
+    transform: translateY(-1000px) rotate(20deg);
+}
+
+.stack-animation-mobile #rec-6 {
+    background-color: #32c1db;
+    z-index: 100;
+    top: 20px;
+    width: 50px;
+    left: 55px;
+    animation: move-6 1.5s 2.5s ease forwards;
+}
+
+.stack-animation-mobile #rec-5 {
+    width: 80px;
+    left: 40px;
+}
+
+.stack-animation-mobile #rec-4 {
+    width: 140px;
+    left: 10px;
+}
+
+.stack-animation-mobile #rec-3 {
+    width: 120px;
+    left: 20px;
+}
+
+.stack-animation-mobile #rec-2 {
+    width: 100px;
+    left: 30px;
+}
+
+.stack-animation-mobile #rec-1 {
+    width: 140px;
+    left: 10px;
+}
+
+.stack-animation-mobile .stack-bottom {
+    position: relative;
+    z-index: 2;
+    top: 10px;
+    left: 0px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 160px;
+    height: 20px;
+    background: #959595;
+    border-radius: 5px;
+}

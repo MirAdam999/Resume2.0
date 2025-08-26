@@ -14,8 +14,8 @@
     padding-top: 5px;
     padding-bottom: 5px;
     position: sticky;
-    z-index: 100;
-    background-color: white;
+    z-index: 99;
+    background-color: none;
     border-radius: 30px;
     transition: transform 0.3s ease;
 }
@@ -24,6 +24,7 @@
     transform: scale(0.8);
     transform-origin: top center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
 }
 
 .nav-link {

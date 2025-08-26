@@ -14,44 +14,113 @@
     margin-bottom: 1px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     top: -23px;
+    transform: translateY(-1000px) rotate(20deg);
 }
 
 #rec-6 {
     background-color: #32c1db;
-    z-index: 5;
+    z-index: 100;
     top: -5px;
     width: 50px;
     left: 278px;
+    animation: move-6 1.5s 2.5s ease forwards;
 }
+
+@keyframes move-6 {
+    from {
+        transform: translateY(-500px) rotate(20deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
 
 #rec-5 {
     background-color: var(--blue);
     width: 161px;
     left: 225px;
+    animation: move-5 1.5s 2s ease forwards;
+}
+
+@keyframes move-5 {
+    from {
+        transform: translateY(-500px) rotate(-20deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 #rec-4 {
     background-color: #ffeea7;
     width: 287px;
     left: 168px;
+    animation: move-4 1.5s 1.5s ease forwards;
+}
+
+@keyframes move-4 {
+    from {
+        transform: translateY(-500px) rotate(30deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 #rec-3 {
     background-color: #32c1db;
     width: 248px;
     left: 186px;
+    animation: move-3 1.5s 1s ease forwards;
+}
+
+@keyframes move-3 {
+    from {
+        transform: translateY(-500px) rotate(-10deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 #rec-2 {
     background-color: var(--blue);
     width: 216px;
     left: 202px;
+    animation: move-2 1.5s 0.3s ease forwards;
 }
+
+@keyframes move-2 {
+    from {
+        transform: translateY(-500px) rotate(15deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
 
 #rec-1 {
     background-color: #ffde59;
     width: 287px;
     left: 168px;
+    animation: move-1 1.5s ease forwards;
+}
+
+@keyframes move-1 {
+    from {
+        transform: translateY(-500px) rotate(-30deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 .stack-bottom {
@@ -64,5 +133,4 @@
     height: 28px;
     background: #959595;
     border-radius: 5px;
-
 }

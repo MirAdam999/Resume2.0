@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import './landing-mobile.css'
-
+import StackMobile from "./stack/stack-mobile";
 import { norm_font, norm_font_fat } from "@/comps/fonts";
 
 export default function LandingMobile() {
@@ -20,6 +20,7 @@ export default function LandingMobile() {
                 />
 
                 <div className="stack-wrapper-mobile">
+                    <StackMobile />
                 </div>
 
             </div>
