@@ -48,10 +48,10 @@
 
 .stack-wrapper {
     position: absolute;
-    top: 15%;
-    left: 20%;
-    width: 100px;
-    height: 200px;
+    top: 5%;
+    left: 3%;
+    width: 610px;
+    height: 280px;
     pointer-events: none;
 }
 

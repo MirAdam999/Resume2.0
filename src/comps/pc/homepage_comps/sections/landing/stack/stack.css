@@ -1,70 +1,68 @@
 .stack-animation {
-    position: absolute;
-    bottom: 15%;
-    left: 10%;
-    width: 100px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    width: 610px;
+    height: 280px;
     z-index: 2;
 }
 
+
 .rectangle {
-    width: 100px;
-    height: 18px;
-    background-color: #00aab7;
-    border-radius: 50px;
-    margin-bottom: 5px;
-    opacity: 0;
-    transform: translateX(100vw);
-    animation: flyin 0.8s ease-out forwards;
+    position: relative;
+    z-index: 3;
+    height: 45px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    top: -23px;
 }
 
-#rec-1 {
-    animation-delay: 0.3s;
-}
-
-#rec-2 {
-    animation-delay: 0.6s;
-}
-
-#rec-3 {
-    animation-delay: 0.9s;
-}
-
-#rec-4 {
-    animation-delay: 1.2s;
+#rec-6 {
+    background-color: #32c1db;
+    z-index: 5;
+    top: -5px;
+    width: 50px;
+    left: 278px;
 }
 
 #rec-5 {
-    animation-delay: 1.5s;
+    background-color: var(--blue);
+    width: 161px;
+    left: 225px;
 }
 
-@keyframes flyin {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+#rec-4 {
+    background-color: #ffeea7;
+    width: 287px;
+    left: 168px;
 }
 
-.stack-base {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+#rec-3 {
+    background-color: #32c1db;
+    width: 248px;
+    left: 186px;
 }
 
-.stack-stick {
-    width: 10px;
-    height: 100px;
-    background: #444;
+#rec-2 {
+    background-color: var(--blue);
+    width: 216px;
+    left: 202px;
+}
+
+#rec-1 {
+    background-color: #ffde59;
+    width: 287px;
+    left: 168px;
 }
 
 .stack-bottom {
-    width: 120px;
-    height: 15px;
-    background: #333;
+    position: relative;
+    z-index: 2;
+    top: -23px;
+    left: 145px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 330px;
+    height: 28px;
+    background: #959595;
     border-radius: 5px;
-    margin-top: 5px;
+
 }

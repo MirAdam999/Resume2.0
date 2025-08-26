@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import './landing.css'
 import { norm_font, norm_font_fat } from "@/comps/fonts";
+import Stack from "./stack/stack";
 
 export default function Landing() {
 
@@ -25,6 +26,7 @@ export default function Landing() {
                 />
 
                 <div className="stack-wrapper">
+                    <Stack />
                 </div>
 
             </div>
