@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+/public/images/prj-screenshots/equpment-video.mp4
+/public/images/prj-screenshots/smishing-video.mp4
+
 # dependencies
 /node_modules
 /.pnp
