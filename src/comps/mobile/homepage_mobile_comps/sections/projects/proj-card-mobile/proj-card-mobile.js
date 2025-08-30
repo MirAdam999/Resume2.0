@@ -17,7 +17,7 @@ const ProjCardMobile = (props) => {
     const skills = props.skills;
     const gitLink = props.gitLink;
     const liveLink = props.liveLink;
-    const img_width = 330;
+    const img_width = 350;
     const img_height = img_width / 2.086;
     const index = props.index;
 
@@ -73,7 +73,7 @@ const ProjCardMobile = (props) => {
 
             <div className='card-buttons-mobile'>
                 <button className={`card-button ${norm_font.className}`} id='card-button-mobile-icon' onClick={goToCode}><FaGithub /></button>
-                <button className={`card-button ${norm_font.className}`} id='card-button-mobile-icon' onClick={goToLive}><FaGlobe /></button>
+                {/*<button className={`card-button ${norm_font.className}`} id='card-button-mobile-icon' onClick={goToLive}><FaGlobe /></button> */}
                 <Link href={{
                     pathname: '/projects_mobile',
                     query: { project: index }

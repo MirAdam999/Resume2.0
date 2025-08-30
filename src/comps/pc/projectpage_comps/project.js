@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Popup from "./popup/popup";
 import './project.css'
 import { norm_font, wide_font_fat } from '../../fonts'
-import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe, FaPlay } from "react-icons/fa";
 import { SiDjango, SiFlask } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
@@ -15,6 +15,7 @@ const Project = forwardRef(function Project(props, ref) {
     const title = props.title;
     const about = props.about;
     const images = props.images;
+    const vid = props.vid;
     const skills = props.skills;
     const gitLink = props.gitLink;
     const liveLink = props.liveLink;
@@ -54,14 +55,15 @@ const Project = forwardRef(function Project(props, ref) {
     return (
         <div ref={ref} className={`project ${is_current}`}>
 
-            {imagePopUp && <Popup setImage={openImage} closeImage={closeImage} proj_images={images} current_image={imagePopUp} />}
+            {imagePopUp && <Popup setImage={openImage} closeImage={closeImage} proj_images={images} current={imagePopUp} vid={vid} />}
 
             <div className='proj-left'>
                 <div className={`proj-title ${norm_font.className}`}>{title}</div>
 
                 <div className='proj-links'>
                     <button className={`proj-link ${wide_font_fat.className}`} onClick={goToCode} ><FaGithub />Code</button>
-                    <button className={`proj-link ${wide_font_fat.className}`} onClick={goToLive} ><FaGlobe />Live Demo</button>
+                    {/*<button className={`proj-link ${wide_font_fat.className}`} onClick={goToLive} ><FaGlobe />Live Demo</button>*/}
+                    <button className={`proj-link ${wide_font_fat.className}`} onClick={() => openImage('video')}><FaPlay />Video Demo</button>
                 </div>
 
                 <div className={`proj-about ${norm_font.className}`}>{about}</div>
@@ -74,7 +76,7 @@ const Project = forwardRef(function Project(props, ref) {
             </div>
 
             <div className='proj-right'>
-                {images.map((image, index) => (
+                {images.slice(0, 3).map((image, index) => (
                     <Image
                         key={index}
                         onClick={() => openImage(image)}

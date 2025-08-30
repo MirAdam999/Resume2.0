@@ -38,6 +38,7 @@ const EventhubProj = {
         ["/images/prj-screenshots/eventhub2.jpg", 'Passed & Attended Event Image Gallery'],
         ["/images/prj-screenshots/eventhub3.jpg", 'My Events Page & Sidebar']
     ],
+    video: "",
     skills: ['MSSQL', 'Flask', 'React', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirAdam999/Project-3-Event-Hub",
     liveLink: ""

@@ -45,6 +45,7 @@ const PegasusProj = {
         ["/images/prj-screenshots/pegasus2.jpg", 'Admin Interface: Flights Display'],
         ["/images/prj-screenshots/pegasus3.jpg", 'Admin Interface: Manage Customers']
     ],
+    video: "",
     skills: ['MSSQL', 'Flask', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirAdam999/Project-2-Flights-Website",
     liveLink: ""

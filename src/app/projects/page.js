@@ -39,7 +39,6 @@ export default function ProjectsPage() {
     useEffect(() => {
         if (!refB.current) return;
         setHeight(refB.current.offsetHeight);
-
     }, [current]);
 
     useEffect(() => {
@@ -47,6 +46,8 @@ export default function ProjectsPage() {
             setCurrent(Number(projectParam));
         }
     }, [projectParam]);
+
+
 
     return (
         <div id='projects-page'>
@@ -82,6 +83,7 @@ export default function ProjectsPage() {
                     title={EqupmentProj.title}
                     about={EqupmentProj.about}
                     images={EqupmentProj.images}
+                    vid={EqupmentProj.video}
                     skills={EqupmentProj.skills}
                     gitLink={EqupmentProj.gitLink}
                     liveLink={EqupmentProj.liveLink}
@@ -92,6 +94,7 @@ export default function ProjectsPage() {
                     title={EventhubProj.title}
                     about={EventhubProj.about}
                     images={EventhubProj.images}
+                    vid={EventhubProj.video}
                     skills={EventhubProj.skills}
                     gitLink={EventhubProj.gitLink}
                     liveLink={EventhubProj.liveLink}
@@ -102,6 +105,7 @@ export default function ProjectsPage() {
                     title={SmishingProj.title}
                     about={SmishingProj.about}
                     images={SmishingProj.images}
+                    vid={SmishingProj.video}
                     skills={SmishingProj.skills}
                     gitLink={SmishingProj.gitLink}
                     liveLink={SmishingProj.liveLink}
@@ -112,6 +116,7 @@ export default function ProjectsPage() {
                     title={PegasusProj.title}
                     about={PegasusProj.about}
                     images={PegasusProj.images}
+                    vid={PegasusProj.video}
                     skills={PegasusProj.skills}
                     gitLink={PegasusProj.gitLink}
                     liveLink={PegasusProj.liveLink}

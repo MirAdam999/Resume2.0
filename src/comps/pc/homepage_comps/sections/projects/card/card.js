@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './card.css'
 import { norm_font, norm_font_fat } from '@/comps/fonts';
-import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaGlobe, FaPlay } from "react-icons/fa";
+import { MdMoreHoriz } from "react-icons/md";
 import { SiDjango, SiFlask } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
@@ -12,13 +13,15 @@ import { GrMysql } from "react-icons/gr";
 const ProjCard = (props) => {
     const title = props.title;
     const short_descript = props.short_descript;
-    const images = props.images.slice(0, 3);
+    const images = props.images;
+    const vid = props.vid
     const skills = props.skills;
     const gitLink = props.gitLink;
     const liveLink = props.liveLink;
     const current = props.current;
-    const img_width = 330;
-    const img_height = img_width / 2.086;
+    const img_height = 165;
+    const img_width = img_height * 1.8;
+    const openPopUp = props.openPopUp
 
     const skillsDict = {
         'MSSQL': <div className={`used-skill ${norm_font.className}`} ><DiMsqlServer className="used-skill-icon" />MSSQL</div>,
@@ -38,13 +41,23 @@ const ProjCard = (props) => {
         window.open(liveLink, '_blank', 'noopener,noreferrer');
     };
 
+    const setDataForPopUp = (current) => {
+        const data = {
+            current: current,
+            vid: vid,
+            proj_images: images
+        };
+        openPopUp(data);
+    };
+
     return (
         <div className={`card ${norm_font.className}`}>
 
             <div className='images-trio'>
-                {images.map((image, index) => (
+                {images.slice(0, 3).map((image, index) => (
                     <Image
                         key={index}
+                        onClick={() => setDataForPopUp(index)}
                         className='card-img'
                         src={image[0]}
                         alt={`${image[1]}-image`}
@@ -68,14 +81,15 @@ const ProjCard = (props) => {
                 </div>
 
                 <div className='card-buttons'>
+                    <button className={`card-button ${norm_font.className}`} onClick={() => setDataForPopUp('video')}><FaPlay />Video Demo</button>
                     <button className={`card-button ${norm_font.className}`} onClick={goToCode}><FaGithub />Code</button>
                     <Link href={{
                         pathname: '/projects',
                         query: { project: current }
                     }} passHref id='prj-link'>
-                        <button className={`card-button ${norm_font.className}`}>Read More</button>
+                        <button className={`card-button ${norm_font.className}`}><MdMoreHoriz />Read More</button>
                     </Link>
-                    <button className={`card-button ${norm_font.className}`} onClick={goToLive}><FaGlobe />Live Demo</button>
+                    {/*<button className={`card-button ${norm_font.className}`} onClick={goToLive}><FaGlobe />Live Demo</button>*/}
                 </div>
 
             </div>

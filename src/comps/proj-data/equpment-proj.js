@@ -4,7 +4,13 @@ const EqupmentProj = {
     title: "Equpment Orders Managment System",
     about: <div id='equpment-proj-about'>
         <p>
-            Equipment Order Management System built using Django, React, and MySQL. The project was inspired by my desire to practice Django skills and to improve upon the equipment ordering system used at the clinic network where I previously worked. The system is designed to be a web application with a simple and user-friendly interface, primarily in Hebrew.
+            System for multi-branch organizations where Equipment orders are consolidated and overseen by a Global Manager.
+            The System features two types of users: Branch Manager and Global Manager.
+            The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches,
+            consolidates orders, and coordinates with suppliers.
+            In addition, the Global Manager controls user access, manages equipment availability, and flags certain items for approval
+            before externall export of orders to suppliers.
+            *The System is designed primarily in Hebrew. This is an early version of a later system that was developed for a multi-branch clinic.
         </p>
 
         <h3>Features</h3>
@@ -30,19 +36,20 @@ const EqupmentProj = {
         <p>
             The system uses Django's Token Authentication for user identification and stores passwords hashed in the database.
         </p>
-
-        <h3>Live Demo</h3>
-        <p>
-            The live demo of the system showcases a fictional multi-branch clinic inspired by the original project concept.< br />
-            For your convenience, demo user data is available on the login page.
-        </p>
     </div>,
-    short_descript: 'System for multi-branch organizations where Equipment orders are consolidated and overseen by a Global Manager. The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches, consolidates orders, and coordinates with suppliers. The Global Manager controls user access, manages equipment availability, and flags certain items for approval before orders are sent externally. *The System is designed primarily in Hebrew. This is an early version of a later system I have developed for a multi-branch clinic.',
+    short_descript: 'System for multi-branch organizations where Equipment orders are consolidated, overseen, and exported to external suppliers by a Global Manager. The System features two types of users: Branch Manager and Global Manager. The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches, consolidates orders, and coordinates with suppliers. In addition, the Global Manager controls user access, manages equipment availability, and flags certain items for approval before orders are sent externally. *The System is designed primarily in Hebrew. This is an early version of a later system that was developed for a multi-branch clinic.',
     images: [
-        ["/images/prj-screenshots/equpment1.png", 'Global Admin Interface: Manage Orders'],
-        ["/images/prj-screenshots/equpment2.png", 'Branch Admin Interface: Create Order'],
-        ["/images/prj-screenshots/equpment3.png", 'Global Admin Interface: Manage Equpment Items']
+        ["/images/prj-screenshots/equpment1.png", 'Branch Admin Interface: Create Order'],
+        ["/images/prj-screenshots/equpment2.png", 'Update My User Data'],
+        ["/images/prj-screenshots/equpment3.png", 'Branch Admin Interface: View an Order'],
+        ["/images/prj-screenshots/equpment4.png", 'Global Admin Interface: Manage Orders'],
+        ["/images/prj-screenshots/equpment5.png", 'Global Admin Interface: View an Order'],
+        ["/images/prj-screenshots/equpment6.png", 'Global Admin Interface: Manage Equipment Items, Create New Item'],
+        ["/images/prj-screenshots/equpment7.png", 'Global Admin Interface: View Orders Pending Export to Supplier'],
+        ["/images/prj-screenshots/equpment8.png", 'Global Admin Interface: View and Export an Order to Supplier'],
+        ["/images/prj-screenshots/equpment9.png", 'Global Admin Interface: Manage Users']
     ],
+    video: "/images/prj-screenshots/equpment-video.mp4",
     skills: ['MySQL', 'Django', 'React', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirAdam999/Equpment",
     liveLink: ""

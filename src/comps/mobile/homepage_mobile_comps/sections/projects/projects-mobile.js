@@ -29,7 +29,7 @@ export default function ProjectsMobile() {
         />,
         <ProjCardMobile
             title={SmishingProj.title}
-
+            short_descript={SmishingProj.short_descript}
             images={SmishingProj.images}
             skills={SmishingProj.skills}
             gitLink={SmishingProj.gitLink}

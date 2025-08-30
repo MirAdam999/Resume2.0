@@ -83,7 +83,7 @@ export default function Home() {
           <Navbar shrink={shrink} navbarLinkActive={navbarLinkActive} setNavbarLinkActive={setNavbarLinkActive} /> :
           <MobileNav />}
 
-        {isPC ? <a id='go-up' onClick={(e) => goUp(e)}><IoIosArrowDropupCircle /></a> : ''}
+        {isPC && shrink ? <a id='go-up' onClick={(e) => goUp(e)}><IoIosArrowDropupCircle /></a> : ''}
 
         <div className={`section-parent${isPC ? "" : "-mobile"}`} id={`landing-parent${isPC ? "" : "-mobile"}`}>
           {isPC ?

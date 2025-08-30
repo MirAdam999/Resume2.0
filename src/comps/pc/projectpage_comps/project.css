@@ -147,13 +147,19 @@
     padding-top: 60px;
 }
 
-.current_proj .proj-img {
+.current_proj .proj-img,
+#projpage-video {
     margin-top: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
     transition: ease 0.3s;
 }
 
-.proj-img:hover {
+.proj-img:hover,
+#projpage-video:hover {
     transform: scale(1.03);
+}
+
+#projpage-video {
+    width: 500;
 }

@@ -1,20 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import './popup.css'
+import './homepage-popup.css'
 import { norm_font } from '@/comps/fonts';
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 import { AiFillCloseSquare } from "react-icons/ai";
 
-const Popup = (props) => {
-    const current = props.current;
-    const vid = props.vid
-    const proj_images = props.proj_images;
-    const setImage = props.setImage;
+const HomepagePopup = (props) => {
+    const [current, setCurrent] = useState(props.data.current);
+    const vid = props.data.vid;
+    const proj_images = props.data.proj_images;
     const closePopup = props.closeImage;
     const img_width = 1120;
     const img_height = img_width / 1.9;
+
 
     useEffect(() => {
         if (open) {
@@ -26,31 +26,31 @@ const Popup = (props) => {
     }, [open]);
 
     const goRight = () => {
-        if (proj_images.indexOf(current) >= proj_images.length - 1) {
-            setImage('video')
-        } else if (current === 'video') {
-            setImage(proj_images[0])
+        if (current === 'video') {
+            setCurrent(0)
+        } else if (current >= proj_images.length - 1) {
+            setCurrent('video')
         } else {
-            setImage(proj_images[proj_images.indexOf(current) + 1])
+            setCurrent(current + 1)
         }
     };
 
     const goLeft = () => {
-        if (proj_images.indexOf(current) == 0) {
-            setImage('video')
-        } else if (current === 'video') {
-            setImage(proj_images[proj_images.length - 1])
+        if (current === 'video') {
+            setCurrent(proj_images.length - 1)
+        } else if (current == 0) {
+            setCurrent('video')
         } else {
-            setImage(proj_images[proj_images.indexOf(current) - 1])
+            setCurrent(current - 1)
         }
     };
 
     return (
-        <div className='popup-wrapper'>
+        <div className='homepage-popup-wrapper'>
 
-            <div className='popup-backround'></div>
+            <div className='homepage-popup-backround'></div>
 
-            <div className="popup-inner">
+            <div className="homepage-popup-inner">
                 <div className='popup-icon' id="arrow-left" onClick={goLeft}><TfiAngleLeft /></div>
                 <div className='popup-img-wrap'>
                     {current === 'video' ?
@@ -64,12 +64,12 @@ const Popup = (props) => {
                             Sorry — your browser doesn't support embedded videos..
                         </video> :
                         <Image className='img-popup'
-                            src={current[0]}
-                            alt={`image-${current[1]}`}
+                            src={proj_images[current][0]}
+                            alt={`image-${proj_images[current][1]}`}
                             width={img_width}
                             height={img_height}
                         />}
-                    <p className={`popup-img-descript ${norm_font.className}`}>{current === 'video' ? 'Video Demo' : current[1]}</p>
+                    <p className={`popup-img-descript ${norm_font.className}`}>{current === 'video' ? 'Video Demo' : proj_images[current][1]}</p>
                 </div>
                 <div className='popup-icon' id="arrow-right" onClick={goRight}><TfiAngleRight /></div>
 
@@ -81,4 +81,4 @@ const Popup = (props) => {
 
 };
 
-export default Popup;
+export default HomepagePopup;

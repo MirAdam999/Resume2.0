@@ -56,7 +56,7 @@ const ProjectMobile = forwardRef(function ProjectMobile(props, ref) {
 
                 <div className='proj-links-mobile'>
                     <button className={`proj-link-mobile ${norm_font.className}`} onClick={goToCode} ><FaGithub id='proj-link-mobile-icon' />Code</button>
-                    <button className={`proj-link-mobile ${norm_font.className}`} onClick={goToLive} ><FaGlobe id='proj-link-mobile-icon' />Live Demo</button>
+                    {/*<button className={`proj-link-mobile ${norm_font.className}`} onClick={goToLive} ><FaGlobe id='proj-link-mobile-icon' />Live Demo</button>*/}
                 </div>
 
                 <div id='project-mobile-images'>
