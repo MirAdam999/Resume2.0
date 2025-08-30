@@ -35,25 +35,30 @@
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
-#card-button-mobile-icon {
+#card-button-mobile-button {
     background-color: var(--grayfont);
-    border-radius: 60px;
-    width: 45px;
-    height: 45px;
+    border-radius: 20px;
+    height: 40px;
+    width: 90px;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     color: white;
     border: none;
-    font-size: 28px;
+    font-size: 15px;
     transition: ease 0.3s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#card-button-mobile-icon:active {
+#card-button-mobile-button:active {
     box-shadow: var(--yellow) 0px 0px 0px 3px;
     transform: scale(0.9);
+}
+
+#card-button-mobile-icon {
+    font-size: 25px;
 }

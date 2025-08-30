@@ -13,6 +13,7 @@ export default function ProjectsMobile() {
             title={EqupmentProj.title}
             short_descript={EqupmentProj.short_descript}
             images={EqupmentProj.images}
+            vid={EqupmentProj.video}
             skills={EqupmentProj.skills}
             gitLink={EqupmentProj.gitLink}
             liveLink={EqupmentProj.liveLink}
@@ -22,6 +23,7 @@ export default function ProjectsMobile() {
             title={EventhubProj.title}
             short_descript={EventhubProj.short_descript}
             images={EventhubProj.images}
+            vid={EventhubProj.video}
             skills={EventhubProj.skills}
             gitLink={EventhubProj.gitLink}
             liveLink={EventhubProj.liveLink}
@@ -31,6 +33,7 @@ export default function ProjectsMobile() {
             title={SmishingProj.title}
             short_descript={SmishingProj.short_descript}
             images={SmishingProj.images}
+            vid={SmishingProj.video}
             skills={SmishingProj.skills}
             gitLink={SmishingProj.gitLink}
             liveLink={SmishingProj.liveLink}
@@ -40,6 +43,7 @@ export default function ProjectsMobile() {
             title={PegasusProj.title}
             short_descript={PegasusProj.short_descript}
             images={PegasusProj.images}
+            vid={PegasusProj.video}
             skills={PegasusProj.skills}
             gitLink={PegasusProj.gitLink}
             liveLink={PegasusProj.liveLink}

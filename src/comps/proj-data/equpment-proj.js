@@ -49,7 +49,7 @@ const EqupmentProj = {
         ["/images/prj-screenshots/equpment8.png", 'Global Admin Interface: View and Export an Order to Supplier'],
         ["/images/prj-screenshots/equpment9.png", 'Global Admin Interface: Manage Users']
     ],
-    video: "/images/prj-screenshots/equpment-video.mp4",
+    video: "/images/prj-screenshots/equpment-video-compressed.mp4",
     skills: ['MySQL', 'Django', 'React', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirAdam999/Equpment",
     liveLink: ""

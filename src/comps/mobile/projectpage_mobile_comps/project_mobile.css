@@ -1,16 +1,22 @@
 #project-mobile {
-    min-width: calc(100vw - 40px);
-    width: calc(100vw - 40px);
+    min-width: calc(100vw);
+    width: calc(100vw);
     display: unset;
     background-color: white;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.project-mobile-wrapper {
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .project-mobile-wrapper .proj-title {
     font-size: 30px;
+    padding-top: 10px;
 }
 
 .project-mobile-wrapper .proj-about h4,
@@ -62,8 +68,30 @@
     transform: scale(0.9);
 }
 
+.proj-img-header {
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
 #project-mobile-images {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.project-mobile-image-descript {
+    width: 300px;
+    padding-left: 10px;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px var(--blue);
+}
+
+#projectpage-mobile-vid {
+    width: 100vw;
 }
