@@ -4,41 +4,43 @@ const EventhubProj = {
     title: "EventHub",
     about:
         <div className="eventhub-proj-about">
-            <p>EventHub: Community Event Management Platform</p>
-
-            <h3>Overview</h3>
-            <p>EventHub is an all-encompassing platform designed to revolutionize the way community events are organized, discovered, and experienced.
-                It offers a seamless interface for users to host, register for, and provide feedback on community events. With a focus on connectivity
-                and user engagement, EventHub bridges the gap between event organizers and attendees, fostering a vibrant community spirit.
+            <p>Eventhub is a comprehensive event management website designed to connect people with experiences that match their interests. Users can easily browse and register for events, create and manage their own, and engage with organizers and attendees through feedback and ratings. Each user has a dedicated profile showcasing their activity, making event discovery and participation simple and engaging.
+            </p>
+            <p>For administrators, the platform provides powerful tools to oversee events, categories, and user accounts, ensuring smooth operation and community management. With a responsive design optimized for desktop devices, the system offers both convenience and control for everyday users and admins alike.
             </p>
 
             <h3>Features</h3>
+            <p>Responsive Design: Optimized for desktop devices.</p>
+            <h4>All Users</h4>
             <ul>
-                <li>User Profiles: Sign up, manage profiles, and become an event organizer, attendee or both.</li>
-                <li>Event Management: Create, manage, and discover community events with ease.</li>
-                <li>Event Registration: Seamless registration for upcoming events.</li>
-                <li>Feedback and Ratings: Provide and view feedback and photos ates, or organizers.</li>
-                <li>Responsive Design: Optimized for desktop devices.</li>
+                <li>Discover Events: Easily explore events that match your interests using smart search filters, and register with just one click.</li>
+                <li>Feedback & Ratings: Share your experience and browse feedback, ratings, and photos from both attendees and organizers.</li>
+                <li>Event Creation & Management: Easily create and manage your own events. Choose from a wide range of categories to help attendees discover your event, or set it as private so each registration requires your approval.</li>
+                <li>User Profiles: Every user has a profile page with a short “About” section and a list of their organized events.</li>
+                <li>Stay Updated: Easily track your registered events, whether upcoming or already attended, through dedicated pages.</li>
             </ul>
+
+            <h4>Admin Users</h4>
+            <ul>
+                <li>Review All Events: Access every event, not just filtered search results.</li>
+                <li>Manage Event Categories: Add, edit, or delete categories, and view the number and list of events in each.</li>
+                <li>Manage Users: Deactivate or reactivate accounts, and browse or filter all users.</li>
+                <li>Manage Admins: Grant or revoke admin permissions for users.</li>
+                <li><em>Note:</em> Admins cannot deactivate their own accounts or revoke their own admin permissions.</li>
+            </ul>
+
 
             <h3>Security</h3>
             <p>EventHub uses JWT tokens for secure authentication for both front and backend stored tokens, and hashes passwords before storing them in the database to ensure user security.</p>
-
-            <h3>Tech Stack</h3>
-            <ul>
-                <li>Database: Microsoft SQL Server for robust data management.</li>
-                <li>Backend: Flask Rest Framework for a powerful API layer.</li>
-                <li>Frontend: React.js for a dynamic and responsive user interface.</li>
-            </ul>
         </div>
     ,
-    short_descript: 'A community event management platform with a seamless, responsive interface for creating, discovering, and registering for events. Users can manage profiles, host or attend events, and share feedback and photos, fostering stronger community connections.',
+    short_descript: 'Eventhub is a comprehensive event management website designed to connect people with experiences that match their interests. Users can easily browse and register for events, create and manage their own, and engage with organizers and attendees through feedback and ratings. Each user has a dedicated profile showcasing their activity, making event discovery and participation simple and engaging. For administrators, the platform provides powerful tools to oversee events, categories, and user accounts, ensuring smooth operation and community management. With a responsive design optimized for desktop devices, the system offers both convenience and control for everyday users and admins alike.',
     images: [
         ["/images/prj-screenshots/eventhub1.jpg", 'Homepage'],
         ["/images/prj-screenshots/eventhub2.jpg", 'Passed & Attended Event Image Gallery'],
         ["/images/prj-screenshots/eventhub3.jpg", 'My Events Page & Sidebar']
     ],
-    video: "",
+    video: "/images/prj-screenshots/eventhub-video.mp4",
     skills: ['MSSQL', 'Flask', 'React', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirAdam999/Project-3-Event-Hub",
     liveLink: ""

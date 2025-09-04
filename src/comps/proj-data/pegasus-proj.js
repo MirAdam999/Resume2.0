@@ -3,49 +3,44 @@
 const PegasusProj = {
     title: "Pegasus",
     about: <div className="pegasus-proj-about">
-        <p>Peagsus: Flight Management System</p>
+        <p>Pegasus is a comprehensive flight management system that streamlines flight scheduling, ticketing, and user management. The web app provides tailored interfaces for customers (or travel agents), airlines, and administrators, enabling efficient flight management and seamless ticketing.</p>
+        <p>Customers can easily search and book flights, manage their tickets, and update personal profiles. Airlines can add and manage flights while maintaining company information. Administrators have full control over user management, airline accounts, and system-wide flight oversight, ensuring smooth operations across the platform.</p>
 
         <h3>Features</h3>
+        <p>Easily search flights by origin, destination, and travel date. You can also look up a specific flight number or view all arrivals and departures within the next 12 hours in any country.</p>
+
+        <h4>Customer Interface:</h4>
+        <p>Intended for private customers or travel agents alike.</p>
         <ul>
-            <li>Database Schema: Detailed schema including tables for Flights, Airline_Companies, Users, Countries, Tickets, Customers, User_Roles, and Administrators.
-            </li>
-            <li>Data Integrity: Use of primary keys (PK), foreign keys (FK), auto-increment (AI), and unique (U) constraints to ensure data integrity.
-            </li>
-            <li>Flight Management: Capabilities to add, update, and query flight information, including departure and landing times, and manage remaining tickets.
-            </li>
-            <li>Airline and Customer Management: Manage airline companies and customer information, including sensitive data such as credit card numbers securely.
-            </li>
-            <li>User Roles and Authentication: Differentiated access and operations based on user roles, ensuring system security and integrity.
-            </li>
-            <li>Comprehensive Ticketing System: Ticket management functionality, linking flights to customers and handling transactions.
-            </li>
+            <li>Purchase tickets effortlessly with just one click.</li>
+            <li>My Tickets: View or cancel your purchased tickets and check the status of your flights.</li>
+            <li>My Profile: Update your personal data, including credit card info.</li>
         </ul>
 
-        <h3>Usage</h3>
-
-        <p>The system is designed for use by airlines, travel agencies or private travelers, and administrative users with varying levels of access.</p>
-
-        <h3>Tech Stack</h3>
+        <h4>Airline Interface:</h4>
         <ul>
-            <li>Database: SQL Server is employed for its robust data management capabilities, handling the storage,
-                retrieval, and manipulation of relational data with high performance and reliability.
-            </li>
-            <li>Backend: The Flask Rest Framework is used to create a powerful API layer. It facilitates the development
-                of RESTful APIs, allowing for flexible, efficient, and scalable backend services.
-            </li>
-            <li>Frontend: A Flask-based user interface provides a straightforward and effective way for users to interact
-                with the system. While Flask is traditionally seen as a backend framework, it can also serve HTML templates,
-                enabling the creation of dynamic web pages for managing and displaying flight information, user accounts, and more.
-            </li>
+            <li>Add Flight: Create a flight for the airline and set the number of available tickets.</li>
+            <li>Manage Flights: View and edit all airline flights, and update their status. Use the search to find a specific flight by flight number or by using criteria.</li>
+            <li>My Profile: Update the Airline’s info.</li>
         </ul>
-    </div>,
-    short_descript: 'A flight management system for airlines, travel agencies, and private travelers. Features include a robust database schema, role-based access control, secure customer and airline management, comprehensive flight scheduling, and an integrated ticketing system ensuring data integrity and efficient operations.',
+
+        <h4>Admin Interface:</h4>
+        <ul>
+            <li>Manage Admins: Revoke or grant admin permissions to existing admin users. Create new admin users. Note: Existing non-admin users cannot be turned into admins for security purposes.</li>
+            <li>Manage Airline Companies: Deactivate and reactivate airline companies’ users. Create new airline company users.</li>
+            <li>Manage Customers: Deactivate and reactivate customers’ users. Create new customer users. Note: unlike admins and airlines, customers can sign up and create their own accounts.</li>
+            <li>All Flights: View all flights or search by flight number.</li>
+            <li>My Profile: Update own user data.</li>
+        </ul>
+
+    </div >,
+    short_descript: 'Pegasus is a comprehensive flight management system that streamlines flight scheduling, ticketing, and user management. The web app provides tailored interfaces for customers (or travel agents), airlines, and administrators, enabling efficient flight management and seamless ticketing. Customers can easily search and book flights, manage their tickets, and update personal profiles. Airlines can add and manage flights while maintaining company information. Administrators have full control over user management, airline accounts, and system-wide flight oversight, ensuring smooth operations across the platform.',
     images: [
         ["/images/prj-screenshots/pegasus1.jpg", 'Homepage & Flight Search'],
         ["/images/prj-screenshots/pegasus2.jpg", 'Admin Interface: Flights Display'],
         ["/images/prj-screenshots/pegasus3.jpg", 'Admin Interface: Manage Customers']
     ],
-    video: "",
+    video: "/images/prj-screenshots/pegasus-video.mp4",
     skills: ['MSSQL', 'Flask', 'HTML', 'CSS'],
     gitLink: "https://github.com/MirAdam999/Project-2-Flights-Website",
     liveLink: ""
