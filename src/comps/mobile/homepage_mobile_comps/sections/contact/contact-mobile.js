@@ -26,7 +26,7 @@ export default function ContactMobile() {
 
     const DownloadCV = () => {
         const link = document.createElement('a');
-        link.href = '/CV.pdf';
+        link.href = '/Miriam_Adam_CV.pdf';
         link.download = 'Miriam_Adam_CV.pdf';
         document.body.appendChild(link);
         link.click();
