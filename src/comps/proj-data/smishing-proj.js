@@ -4,8 +4,8 @@ const SmishingProj = {
     title: "Mobile App Consept Presentation",
     about: <div>
         <p>
-            This mini-project is a Web-Poster designed to showcase an early version of an Android app called "Smishing Buster".
-            The app was developed in an academic setting as part of a CS degree, with the purpose of helping users protect themselves from SMS phishing—also known as "Smishing."
+            This mini-project is a Web-Poster designed to showcase an early version of an Android app called &apos;Smishing Buster&apos;.
+            The app was developed in an academic setting as part of a CS degree, with the purpose of helping users protect themselves from SMS phishing—also known as &apos;Smishing&apos;.
         </p>
         <p>
             The Web-Poster presents the concept, mechanics, and a video demo of the app in a clean and minimalist format.

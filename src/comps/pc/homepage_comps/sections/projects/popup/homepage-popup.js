@@ -61,7 +61,7 @@ const HomepagePopup = (props) => {
                             controls={true}
                             loop={true}
                             id='projpage-vid'>
-                            Sorry — your browser doesn't support embedded videos..
+                            Sorry — your browser doesn&apos;t support embedded videos..
                         </video> :
                         <Image className='img-popup'
                             src={proj_images[current][0]}

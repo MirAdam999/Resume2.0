@@ -10,6 +10,7 @@ import PegasusProj from '@/comps/proj-data/pegasus-proj';
 export default function ProjectsMobile() {
     const projects = [
         <ProjCardMobile
+            key={0}
             title={EqupmentProj.title}
             short_descript={EqupmentProj.short_descript}
             images={EqupmentProj.images}
@@ -20,6 +21,7 @@ export default function ProjectsMobile() {
             index={0}
         />,
         <ProjCardMobile
+            key={1}
             title={EventhubProj.title}
             short_descript={EventhubProj.short_descript}
             images={EventhubProj.images}
@@ -30,6 +32,7 @@ export default function ProjectsMobile() {
             index={1}
         />,
         <ProjCardMobile
+            key={2}
             title={SmishingProj.title}
             short_descript={SmishingProj.short_descript}
             images={SmishingProj.images}
@@ -40,6 +43,7 @@ export default function ProjectsMobile() {
             index={2}
         />,
         <ProjCardMobile
+            key={3}
             title={PegasusProj.title}
             short_descript={PegasusProj.short_descript}
             images={PegasusProj.images}

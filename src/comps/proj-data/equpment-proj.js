@@ -26,7 +26,7 @@ const EqupmentProj = {
         <ul>
             <li>Management of Branches, Suppliers, and Equipment: View, create, and update branches, suppliers, equipment items, and categories.</li>
             <li>User Management: Create new users (external registration is not available), view users, promote them to admins, or block them from the system.</li>
-            <li>Approval System: Flag certain equipment items as "Manager Approval Required." Orders containing these items will need national admin approval before being sent to suppliers.</li>
+            <li>Approval System: Flag certain equipment items as &apos;Manager Approval Required.&apos; Orders containing these items will need national admin approval before being sent to suppliers.</li>
             <li>Order Monitoring: View orders requiring attention (those not yet sent to suppliers or containing items requiring approval).</li>
             <li>Order Filtering: Filter orders based on various criteria.</li>
             <li>Order Dispatch: Generate Word files for orders by branch and supplier, which can be annotated and sent to suppliers. Future updates plan to send PDF orders directly via email.</li>
@@ -34,7 +34,7 @@ const EqupmentProj = {
 
         <h4>User Authentication:</h4>
         <p>
-            The system uses Django's Token Authentication for user identification and stores passwords hashed in the database.
+            The system uses Django&apos;s Token Authentication for user identification and stores passwords hashed in the database.
         </p>
     </div>,
     short_descript: 'System for multi-branch organizations where Equipment orders are consolidated, overseen, and exported to external suppliers by a Global Manager. The System features two types of users: Branch Manager and Global Manager. The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches, consolidates orders, and coordinates with suppliers. In addition, the Global Manager controls user access, manages equipment availability, and flags certain items for approval before orders are sent externally. *The System is designed primarily in Hebrew. This is an early version of a later system that was developed for a multi-branch clinic.',

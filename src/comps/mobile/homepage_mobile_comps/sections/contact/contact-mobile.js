@@ -36,7 +36,7 @@ export default function ContactMobile() {
     return (
         <div className="section-mobile" id="contact-mobile">
 
-            <div id='header' className={wide_font.className}>Let's Connect!</div>
+            <div id='header' className={wide_font.className}>Let&apos;s Connect!</div>
 
             <div id="contact-info-mobile" className={norm_font.className}>
                 <div id="contact-info-top">

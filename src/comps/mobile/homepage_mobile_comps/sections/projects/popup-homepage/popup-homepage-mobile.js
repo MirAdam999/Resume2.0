@@ -63,7 +63,7 @@ const MobilePopupHomepage = (props) => {
                             controls={true}
                             loop={true}
                             id='mobile-vid'>
-                            Sorry — your browser doesn't support embedded videos..
+                            Sorry — your browser doesn&apos;t support embedded videos..
                         </video> :
                         <Image className='img-popup'
                             src={images[current][0]}

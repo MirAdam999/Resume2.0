@@ -14,6 +14,7 @@ export default function Carousel(props) {
 
     const projects = [
         <ProjCard
+            key={0}
             openPopUp={openPopUp}
             title={EqupmentProj.title}
             short_descript={EqupmentProj.short_descript}
@@ -25,6 +26,7 @@ export default function Carousel(props) {
             current={current}
         />,
         <ProjCard
+            key={1}
             openPopUp={openPopUp}
             title={EventhubProj.title}
             short_descript={EventhubProj.short_descript}
@@ -36,6 +38,7 @@ export default function Carousel(props) {
             current={current}
         />,
         <ProjCard
+            key={2}
             openPopUp={openPopUp}
             title={SmishingProj.title}
             short_descript={SmishingProj.short_descript}
@@ -47,6 +50,7 @@ export default function Carousel(props) {
             current={current}
         />,
         <ProjCard
+            key={3}
             openPopUp={openPopUp}
             title={PegasusProj.title}
             short_descript={PegasusProj.short_descript}

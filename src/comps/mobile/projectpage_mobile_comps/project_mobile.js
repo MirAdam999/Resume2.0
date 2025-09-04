@@ -50,7 +50,7 @@ const ProjectMobile = forwardRef(function ProjectMobile(props, ref) {
                 controls={true}
                 loop={true}
                 id='projectpage-mobile-vid'>
-                Sorry — your browser doesn't support embedded videos..
+                Sorry — your browser doesn&apos;t support embedded videos..
             </video>
 
             <div className="project-mobile-wrapper">
@@ -73,7 +73,7 @@ const ProjectMobile = forwardRef(function ProjectMobile(props, ref) {
                 <div id='project-mobile-images'>
                     <h3 className={`proj-img-header ${norm_font_fat.className}`}>Screenshots</h3>
                     {images.map((image, index) => (
-                        <div>
+                        <div key={index}>
                             <Image
                                 key={index}
                                 className='proj-img'
