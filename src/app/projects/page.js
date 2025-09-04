@@ -14,8 +14,7 @@ import { SlArrowLeftCircle, SlArrowRightCircle } from "react-icons/sl";
 import './projects_page.css'
 
 export default function ProjectsPage() {
-    const searchParams = useSearchParams();
-    const projectParam = searchParams.get("project");
+    const [projectParam, setProjectParam] = useState(null);
     const [current, setCurrent] = useState(0)
     const refB = useRef(null);
     const [height, setHeight] = useState(0);
@@ -35,6 +34,11 @@ export default function ProjectsPage() {
             setCurrent(current + 1)
         }
     }
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const proj = params.get("project");
+        if (proj) setProjectParam(Number(proj));
+    }, []);
 
     useEffect(() => {
         if (!refB.current) return;
