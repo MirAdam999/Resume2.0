@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import Project from "@/comps/pc/projectpage_comps/project"
 import EqupmentProj from "@/comps/proj-data/equpment-proj";
