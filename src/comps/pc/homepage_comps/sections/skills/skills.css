@@ -8,9 +8,11 @@
 }
 
 #skills-left {
+    display: flex;
+    flex-direction: column;
     width: 40%;
     align-self: center;
-    justify-items: right;
+    align-items: flex-end;
 }
 
 #skills #header {

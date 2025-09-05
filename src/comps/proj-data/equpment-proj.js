@@ -1,15 +1,15 @@
 import '../pc/projectpage_comps/project.css'
 
 const EqupmentProj = {
-    title: "Equpment Orders Managment System",
+    title: "Equipment Orders Managment System",
     about: <div id='equpment-proj-about'>
         <p>
-            System for multi-branch organizations where Equipment orders are consolidated and overseen by a Global Manager.
+            System for multi-branch organizations where equipment orders are consolidated and overseen by a Global Manager.
             The System features two types of users: Branch Manager and Global Manager.
             The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches,
             consolidates orders, and coordinates with suppliers.
             In addition, the Global Manager controls user access, manages equipment availability, and flags certain items for approval
-            before externall export of orders to suppliers.
+            before external export of orders to suppliers.
             *The System is designed primarily in Hebrew. This is an early version of a later system that was developed for a multi-branch clinic.
         </p>
 
@@ -37,7 +37,7 @@ const EqupmentProj = {
             The system uses Django&apos;s Token Authentication for user identification and stores passwords hashed in the database.
         </p>
     </div>,
-    short_descript: 'System for multi-branch organizations where Equipment orders are consolidated, overseen, and exported to external suppliers by a Global Manager. The System features two types of users: Branch Manager and Global Manager. The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches, consolidates orders, and coordinates with suppliers. In addition, the Global Manager controls user access, manages equipment availability, and flags certain items for approval before orders are sent externally. *The System is designed primarily in Hebrew. This is an early version of a later system that was developed for a multi-branch clinic.',
+    short_descript: 'System for multi-branch organizations where Equipment orders are consolidated, overseen, and exported to external suppliers by a Global Manager. The System features two types of users: Branch Manager and Global Manager. The Branch Managers can create, track, and confirm equipment orders, while a Global Manager oversees all branches, consolidates orders, and coordinates with suppliers. In addition, the Global Manager controls user access, manages equipment availability, and flags certain items for approval before orders are sent externaly. *The System is designed primarily in Hebrew. This is an early version of a later system that was developed for a multi-branch clinic.',
     images: [
         ["/images/prj-screenshots/equpment1.png", 'Branch Admin Interface: Create Order'],
         ["/images/prj-screenshots/equpment2.png", 'Update My User Data'],

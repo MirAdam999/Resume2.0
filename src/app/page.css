@@ -40,6 +40,7 @@
 /*sections*/
 
 .section-parent {
+    display: flex;
     align-self: center;
     justify-content: center;
     justify-items: center;
